@@ -113,7 +113,10 @@ html,body{margin:0;padding:0;height:100%;overflow:hidden;}
 .polar::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;border-radius:2px 2px 0 0;background:linear-gradient(90deg,var(--c1,#F2D9D0),var(--c2,#DDD6F0),var(--c3,#C8D5C0),var(--c1,#F2D9D0));}
 .polar .inn{overflow:hidden;}
 .polar svg{display:block;width:100%;height:auto;}
+.polar video{width:100%;height:100%;object-fit:cover;display:block;}
 .ptag{position:absolute;bottom:8px;left:9px;right:9px;text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.74rem;color:var(--mid);line-height:1.3;}
+.vid-badge{position:absolute;top:6px;right:6px;background:rgba(74,55,40,.62);color:white;font-size:.55rem;padding:2px 6px;border-radius:8px;letter-spacing:.06em;pointer-events:none;z-index:4;}
+.hang-polar video{width:100%;height:100%;object-fit:cover;display:block;}
 .ctxt{position:absolute;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.72rem;color:var(--dusty);z-index:3;pointer-events:none;opacity:0;transition:opacity .5s ease;white-space:nowrap;}
 .ctxt.vis{opacity:.7;}
 .j-sh{text-align:center;padding:5rem 1rem 1.5rem;position:relative;z-index:2;}
@@ -427,54 +430,79 @@ footer p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.95r
     <div class="sarrow"><span>scroll</span><div class="sline"></div></div>
   </section>
   <div class="j-sh"><h2>Our <em>Little</em> World</h2><p>scattered memories — every one of them yours ✦</p></div>
-  <div class="scatter-zone" id="sz1" style="height:1100px;"></div>
+  <div class="scatter-zone" id="sz1" style="height:1400px;"></div>
   <div class="j-sh" style="padding-top:2rem;"><h2>Hung With <em>Love</em></h2><p>strung up moments ✦</p></div>
-  <div class="hanging-zone" id="hz1" style="height:320px;"></div>
-  <div class="scatter-zone" id="sz2" style="height:920px;"></div>
+  <div class="hanging-zone" id="hz1" style="height:340px;"></div>
+
+  <!-- NEW CLUSTER SECTION: November & December -->
+  <div class="j-sh" style="padding-top:3rem;"><h2>The <em>First</em> Chapters</h2><p>november & december — where it all began ♡</p></div>
+  <div class="scatter-zone" id="sz-early" style="height:1300px;"></div>
+
+  <div class="scatter-zone" id="sz2" style="height:1100px;"></div>
   <div class="j-div"><div class="j-dln"></div><span>✦ ♡ ✦</span><div class="j-dln r"></div></div>
-  <div class="j-sh"><h2>Our <em>Story</em></h2><p>every chapter — drop in your photos &amp; videos ✦</p></div>
+  <div class="j-sh"><h2>Our <em>Story</em></h2><p>every chapter, told in moments ✦</p></div>
   <section class="tlwrap" id="j-tlwrap">
     <div class="tltrack">
       <div class="tlspine"><div class="spfill" id="j-spfill"></div></div>
+
+      <!-- August 2025 — The Day We Met -->
       <div class="tlrow ev-left">
         <div class="tll"><div class="tlcard" style="--ca:#E8C4B8;--cb:#DDD6F0;--cc:#C8D5C0"><span class="tlemoji">🌸</span><div class="tldate">August 2025</div><div class="tltitle">The Day We <em>Met</em></div><div class="tldesc">Out of nowhere, there you were — and suddenly nowhere felt exactly like somewhere I'd always wanted to be.</div><div class="tlmedia"><div class="mgrid single"><div class="mslot"><input type="file" accept="image/*,video/*" onchange="loadM(this)"><span class="si">📸</span><span class="sh2">tap to add your photo</span></div></div></div></div></div>
         <div class="tlm"><div class="tldot"></div></div><div class="tlr"></div>
       </div>
+
+      <!-- September / October 2025 — Getting Closer -->
       <div class="tlrow ev-right">
         <div class="tll"></div><div class="tlm"><div class="tldot"></div></div>
-        <div class="tlr"><div class="tlcard" style="--ca:#DDD6F0;--cb:#C8D5C0;--cc:#D0E4F0"><span class="tlemoji">☕</span><div class="tldate">September 2025</div><div class="tltitle">Our First <em>Date</em></div><div class="tldesc">That little café. You laughed and I thought — I want to hear that laugh forever.</div><div class="tlmedia"><div class="mgrid" style="--cols:2"><div class="mslot"><input type="file" accept="image/*" onchange="loadM(this)"><span class="si">📸</span><span class="sh2">photo</span></div><div class="mslot"><input type="file" accept="image/*" onchange="loadM(this)"><span class="si">📸</span><span class="sh2">photo</span></div></div></div></div></div>
+        <div class="tlr"><div class="tlcard" style="--ca:#DDD6F0;--cb:#C8D5C0;--cc:#D0E4F0"><span class="tlemoji">🍂</span><div class="tldate">September — October 2025</div><div class="tltitle">Getting <em>Closer</em></div><div class="tldesc">The weeks in between where everything started to feel different — every text, every call, every smile just a little more meant.</div><div class="tlmedia"><div class="mgrid single"><div class="mslot"><input type="file" accept="image/*,video/*" onchange="loadM(this)"><span class="si">📸</span><span class="sh2">add a memory</span></div></div></div></div></div>
       </div>
+
+      <!-- November 2025 — real photos 0,1,2,3 -->
       <div class="tlrow ev-left">
-        <div class="tll"><div class="tlcard" style="--ca:#C8D5C0;--cb:#D4EDE4;--cc:#D0E4F0"><span class="tlemoji">🌅</span><div class="tldate">October 2025</div><div class="tltitle">Our First <em>Sunrise</em></div><div class="tldesc">We stayed up talking so late we accidentally watched the sun come up. You said "oh wow" — I was looking at you.</div><div class="tlmedia"><div class="mgrid single"><div class="mslot"><input type="file" accept="image/*,video/*" onchange="loadM(this)"><span class="si">🎥</span><span class="sh2">add a photo or video</span></div></div></div></div></div>
+        <div class="tll"><div class="tlcard" style="--ca:#F5DDD0;--cb:#F2D9D0;--cc:#E8C4B8"><span class="tlemoji">🎂</span><div class="tldate">November 2025</div><div class="tltitle">First <em>Memories</em></div><div class="tldesc">The first chapter of our story — every photo a heartbeat, every moment something we'll keep forever.</div><div class="tlmedia" id="tl-nov"></div></div></div>
         <div class="tlm"><div class="tldot"></div></div><div class="tlr"></div>
       </div>
-      <div class="tlrow ev-right">
-        <div class="tll"></div><div class="tlm"><div class="tldot"></div></div>
-        <div class="tlr"><div class="tlcard" style="--ca:#F5DDD0;--cb:#F2D9D0;--cc:#E8C4B8"><span class="tlemoji">🎂</span><div class="tldate">November 2025</div><div class="tltitle">Your <em>Birthday</em></div><div class="tldesc">Getting to celebrate you for the very first time. Candles, cake, and all the love I could fit into one day.</div><div class="tlmedia"><div class="mgrid" style="--cols:2"><div class="mslot"><input type="file" accept="image/*" onchange="loadM(this)"><span class="si">📸</span></div><div class="mslot"><input type="file" accept="video/*" onchange="loadM(this)"><span class="si">🎥</span></div></div></div></div></div>
-      </div>
+
+      <!-- December 2025 — real photos 4,5,6,7,8 -->
       <div class="tlrow ev-left">
-        <div class="tll"><div class="tlcard" style="--ca:#D0E4F0;--cb:#DDD6F0;--cc:#EDD4E8"><span class="tlemoji">❄️</span><div class="tldate">December 2025</div><div class="tltitle">Our First <em>Winter</em></div><div class="tldesc">Hot chocolate, twinkle lights, your mittened hand in mine. I realised: I have everything I need right here.</div><div class="tlmedia"><div class="mgrid" style="--cols:2"><div class="mslot"><input type="file" accept="image/*" onchange="loadM(this)"><span class="si">📸</span></div><div class="mslot"><input type="file" accept="image/*" onchange="loadM(this)"><span class="si">📸</span></div></div></div></div></div>
+        <div class="tll"><div class="tlcard" style="--ca:#D0E4F0;--cb:#DDD6F0;--cc:#EDD4E8"><span class="tlemoji">❄️</span><div class="tldate">December 2025</div><div class="tltitle">December <em>Moments</em></div><div class="tldesc">The year closing softly — your laugh, the lights, the warmth of everything we'd already become.</div><div class="tlmedia" id="tl-dec"></div></div></div>
         <div class="tlm"><div class="tldot"></div></div><div class="tlr"></div>
       </div>
+
+      <!-- January 2026 — real photos 9,10,11,12,13,14 -->
       <div class="tlrow ev-right">
         <div class="tll"></div><div class="tlm"><div class="tldot"></div></div>
-        <div class="tlr"><div class="tlcard" style="--ca:#E8C4B8;--cb:#F2D9D0;--cc:#EDD4E8"><span class="tlemoji">🎆</span><div class="tldate">January 2026</div><div class="tltitle">New Year, Same <em>Us</em></div><div class="tldesc">Midnight came and I kissed you first. The fireworks were nice but you were the best view.</div><div class="tlmedia"><div class="mgrid" style="--cols:2"><div class="mslot"><input type="file" accept="image/*" onchange="loadM(this)"><span class="si">📸</span></div><div class="mslot"><input type="file" accept="video/*" onchange="loadM(this)"><span class="si">🎥</span></div></div></div></div></div>
+        <div class="tlr"><div class="tlcard" style="--ca:#E8C4B8;--cb:#F2D9D0;--cc:#EDD4E8"><span class="tlemoji">🎆</span><div class="tldate">January 2026</div><div class="tltitle">New Year, Same <em>Us</em></div><div class="tldesc">A brand new year — and the only resolution I needed was more of you. More of this. More of us.</div><div class="tlmedia" id="tl-jan"></div></div></div>
       </div>
+
+      <!-- February 2026 — real photos 15,16,17,18,19,20 -->
       <div class="tlrow ev-left">
-        <div class="tll"><div class="tlcard" style="--ca:#DDD6F0;--cb:#EDD4E8;--cc:#E8C4B8"><span class="tlemoji">💌</span><div class="tldate">February 2026</div><div class="tltitle">Valentine's <em>Day</em></div><div class="tldesc">A whole holiday just to say what I think every single day. I love you, I love you, I love you.</div><div class="tlmedia"><div class="mgrid" style="--cols:3"><div class="mslot"><input type="file" accept="image/*" onchange="loadM(this)"><span class="si">📸</span></div><div class="mslot"><input type="file" accept="image/*" onchange="loadM(this)"><span class="si">📸</span></div><div class="mslot"><input type="file" accept="image/*" onchange="loadM(this)"><span class="si">📸</span></div></div></div></div></div>
+        <div class="tll"><div class="tlcard" style="--ca:#DDD6F0;--cb:#EDD4E8;--cc:#E8C4B8"><span class="tlemoji">💌</span><div class="tldate">February 2026</div><div class="tltitle">Valentine's <em>Season</em></div><div class="tldesc">A whole month to say what I think every single day. I love you, I love you, I love you.</div><div class="tlmedia" id="tl-feb"></div></div></div>
         <div class="tlm"><div class="tldot"></div></div><div class="tlr"></div>
       </div>
+
+      <!-- March 2026 — real photos 21,22,23,24,25,26,27,28,29 -->
       <div class="tlrow ev-right">
         <div class="tll"></div><div class="tlm"><div class="tldot"></div></div>
-        <div class="tlr"><div class="tlcard" style="--ca:#F2D9D0;--cb:#DDD6F0;--cc:#C8D5C0"><span class="tlemoji">✨</span><div class="tldate">March 2026 — right now</div><div class="tltitle">Still <em>Us</em>, Always</div><div class="tldesc">This page is a love letter to every laugh, every quiet moment. The best chapters are still being written.</div><div class="tlmedia"><div class="mgrid" style="--cols:2"><div class="mslot"><input type="file" accept="image/*" onchange="loadM(this)"><span class="si">📸</span></div><div class="mslot"><input type="file" accept="video/*" onchange="loadM(this)"><span class="si">🎥</span></div></div></div></div></div>
+        <div class="tlr"><div class="tlcard" style="--ca:#F2D9D0;--cb:#DDD6F0;--cc:#C8D5C0"><span class="tlemoji">✨</span><div class="tldate">March 2026 — right now</div><div class="tltitle">Still <em>Us</em>, Always</div><div class="tldesc">This page is a love letter to every laugh, every quiet moment. The best chapters are still being written.</div><div class="tlmedia" id="tl-mar"></div></div></div>
       </div>
+
     </div>
   </section>
-  <div class="scatter-zone" id="sz3" style="height:1040px;"></div>
+  <div class="scatter-zone" id="sz3" style="height:1300px;"></div>
   <div class="j-sh" style="padding-top:2rem;"><h2>Little <em>Moments</em></h2><p>suspended in time ♡</p></div>
-  <div class="hanging-zone" id="hz2" style="height:340px;"></div>
+  <div class="hanging-zone" id="hz2" style="height:360px;"></div>
   <div class="j-div"><div class="j-dln"></div><span>♡</span><div class="j-dln r"></div></div>
-  <div class="scatter-zone" id="sz4" style="height:880px;"></div>
+
+  <!-- NEW CLUSTER: January & February -->
+  <div class="j-sh" style="padding-top:1rem;"><h2>Into <em>The New Year</em></h2><p>january & february — every day more in love ✦</p></div>
+  <div class="scatter-zone" id="sz-mid" style="height:1300px;"></div>
+
+  <div class="scatter-zone" id="sz4" style="height:1100px;"></div>
+
+  <!-- NEW CLUSTER: March onwards — videos featured -->
+  <div class="j-sh" style="padding-top:2rem;"><h2>Still <em>Us</em>, Always</h2><p>march 2026 and counting — our favourite chapters ♡</p></div>
+  <div class="scatter-zone" id="sz-now" style="height:1300px;"></div>
   <section class="lovesec"><div class="lovein"><div class="loveq" id="j-lq">"In all the world, there is no heart for me like yours.<br>In all the world, there is no love for you like mine."</div><div class="lovesig">— yours, always ♡</div></div></section>
   <div class="scroll-strip-section">
     <h2 class="scroll-strip-label">Every <em>Little Thing</em></h2>
@@ -772,51 +800,202 @@ function initJourney(){
   const edgeLabels=[{t:'♡ just us',x:'4vw',y:'28vh',rot:'-13deg',d:'5s'},{t:'✦ forever',x:'88vw',y:'40vh',rot:'8deg',d:'6s'},{t:'my sunshine ♡',x:'3vw',y:'62vh',rot:'-7deg',d:'7s'},{t:'♡ always',x:'90vw',y:'70vh',rot:'14deg',d:'5.5s'},{t:'together ✦',x:'5vw',y:'82vh',rot:'-10deg',d:'6.5s'},{t:'♡ you & me',x:'86vw',y:'14vh',rot:'5deg',d:'4.5s'}];
   edgeLabels.forEach(l=>{const el=document.createElement('div');el.className='floaty-label';el.textContent=l.t;el.style.cssText=`left:${l.x};top:${l.y};--rot:${l.rot};animation-duration:${l.d};animation-delay:${Math.random()*3}s;`;document.getElementById('journey-view').appendChild(el);});
 
-  // Real photos from Chirag & Meghana's Google Photos album
-  // Base IDs extracted — served via lh3.googleusercontent.com at high res (w800)
   const GHBASE = 'https://lh3.googleusercontent.com/pw/';
+
   const photos=[
-    {id:'AP1GczPR8WCBzEmlaDQy9bI-LgcV3YLTTHOEpAaMiqW2ypTyBR2p3fED2AxZeIrD3XA6aSZQGNR2I8eAnRyWDfiBVFdtF8wzofeuom81eI4moHD-__lpuFJj',w:220,h:290,rot:-8,tag:'"the beginning of everything" 🌸',c1:'#F2D9D0',c2:'#DDD6F0',c3:'#C8D5C0'},
-    {id:'AP1GczNjTcMNwcIschPb9hLHUNFbGDZvZPbRXQeaMB7gQUEZGVqVXvaSK70Y0M4gKO0WDPb0fi1Jj2QuUGKBSm1ecr5UyL73CYdmkaTCF_vvHSaI5YeACyWI',w:190,h:250,rot:5,tag:'"you make every sunset softer" 🌅',c1:'#DDD6F0',c2:'#C8D5C0',c3:'#D0E4F0'},
-    {id:'AP1GczPXXnJADD9VJRjsH5UEZ7ojetFinFwhhXfx3UavY0zEBdb06-HwczDaE3xg47kK2rAXcTLAgD9uVh6ETTp6LtefSKIaQ9wEKB0ET9b4JYiF2HSS633a',w:240,h:160,rot:3,tag:'"same coffee, same cozy corner ☕"',c1:'#C8D5C0',c2:'#D0E4F0',c3:'#F5DDD0'},
-    {id:'AP1GczP-IXpsjuGlj8_Hn2DZCr4GOFwfguEmLOBto2BbgKaIXmEsnLgVynKVFOuLEk31mlV7coXxXzuaT9XAvctawOtyWs-Qo5vFsYw--g0W8noU21sSb0DV',w:200,h:265,rot:-6,tag:'"you are my heart" ♡',c1:'#E8C4B8',c2:'#F2D9D0',c3:'#EDD4E8'},
-    {id:'AP1GczNG8JUkyfC27pUXpbS0ss4IDHHQ5aP3aEyp58PAGuMeQuovjr19gts4j2edUrn3cGbgYUqykrgjBOW-G1YO0YVL2l3iu5SabdXf0kY5XOJjQmvXfpCI',w:210,h:280,rot:7,tag:'"us vs the whole world 🌍"',c1:'#F5DDD0',c2:'#E8C4B8',c3:'#DDD6F0'},
-    {id:'AP1GczNMDllMttUVFvngsayGWfrPfB-b38zWgWipeu0hctFd8tjwY1l-BlzDn98Dfhs6DA37sCTPseL6luvpNjyqmrDwz9NBJnhsu5Vr-KMyqaHbgUdFl8cb',w:230,h:160,rot:-2,tag:'"in this light, you\'re glowing ✨"',c1:'#F5DDD0',c2:'#F2D9D0',c3:'#E8C4B8'},
-    {id:'AP1GczOKKms22WM69sik4yd0Snx3M-ySZN1PoPO1A3EqTzYZ1hQefp0HxMCoYQnFzTHGIMwjCq4eFTpCWfsn1L5HMzh2bLZVaqlgrn90bnRwYKuvkg6lti2x',w:230,h:160,rot:4,tag:'"little moments, big memories ♡"',c1:'#DDD6F0',c2:'#EDD4E8',c3:'#F2D9D0'},
-    {id:'AP1GczP9J6RGiRxqwo_Cre6-F0_6AfRALvEJwKxMMznMBh4GqPBGOokV9HNdwS7TR7LljWuzId0kqC1U3jCHsBgsPIj5klRkllwtXAl9YubRLjeobntp0US5',w:230,h:160,rot:-3,tag:'"always laughing with you ✦"',c1:'#C8D5C0',c2:'#D4EDE4',c3:'#D0E4F0'},
-    {id:'AP1GczP_4kw4KjhY6z68_C3Jy7SyIddCLzfEvWrRUKHcz-GCAbVSGwfJ3X4ZwiOamcE-COXx3IzEfhco3lpBFX-8oZg3LZ9LBgCNiWoQ3QlRyP1ZRYos1ziZ',w:200,h:265,rot:6,tag:'"every day I choose you 🌸"',c1:'#F2D9D0',c2:'#DDD6F0',c3:'#EDD4E8'},
-    {id:'AP1GczMYPI6FYjo8BpIZweqJBiPyZyu47DdrDig7rj9eHQy6n9j5OI4vwAO92cCnu4AyfE4WqkOIKA6L-MwiHHA6HTzulwu4nyGOpO0XmxsTvrJfV6bDKur6',w:200,h:265,rot:-5,tag:'"home is wherever you are ♡"',c1:'#E8C4B8',c2:'#F5DDD0',c3:'#DDD6F0'},
-    {id:'AP1GczPFoMYqpb3Vpi0rHnRYNq713DKos2uXN9FNyLMdLYEllPMvfiGIrKERQDSTKnoZ7nqqSLL9gHWWNv74JSrnDeim6Odv6aTjMSHq8OKNTPBKxaVHLTtc',w:200,h:265,rot:2,tag:'"my favourite view ✦"',c1:'#DDD6F0',c2:'#C8D5C0',c3:'#D0E4F0'},
-    {id:'AP1GczOSozUVZAvlskl-8Swo4VjXT4QDIxUL_imZisJmh6PXusFdeZqR73GXWzLNi1L_JM7NIezOGLXB6hUY3j0jG8bl9eHBuJKbk8uPyeZ4Yvi99sCprF5k',w:230,h:160,rot:-4,tag:'"look at us — we\'re everything ♡"',c1:'#F5DDD0',c2:'#E8C4B8',c3:'#EDD4E8'},
-    {id:'AP1GczOf2Y5C1HYnyAthoUhbCam6_s27EpmpWLYNx3zXryLZAes_Vi7qnm3vslQ6xiSWE5Y6WRWDMVWQXRQsER4zPYlNmh4tMAOQXT9z5LZXeSbviGPT_8Sl',w:190,h:250,rot:3,tag:'"sweet little moments ✦"',c1:'#C8D5C0',c2:'#D4EDE4',c3:'#F2D9D0'},
-    {id:'AP1GczOpKeWVlSAoOYS0cMBMQo8L0E_h9sDBQbXJWJwtKITbOdzwCoOktmsX1WYOEVT1sTGpsK8UQU35awAI-x1qY1eNimExN7G95V589OJtut1g93L_4ZvT',w:230,h:160,rot:-1,tag:'"still falling for you 🌸"',c1:'#DDD6F0',c2:'#F2D9D0',c3:'#E8C4B8'},
-    {id:'AP1GczNX0_tx2kt7PrFaxwNz9LQiLoGm5OKhsMdHcyHiRb_XJWXCT3UMciwUkC4_sbhNNUPFKV0DU2CiHi1OjM85kA34HFU1CUTyOQkR-pxhPsbiXrR51naB',w:200,h:265,rot:-7,tag:'"my whole heart ♡"',c1:'#E8C4B8',c2:'#EDD4E8',c3:'#DDD6F0'},
-    {id:'AP1GczOBN7OrKGC51-OEv7nC0ghvsPJ29kV1CXu-_qG_cSBNzjqJJH8WHI9qLFDaR7c_L2Mcq329v-5Q2_tA1X1A4FhOlw9ZoDakew87k0OpZg9IvS-c8VRB',w:190,h:250,rot:5,tag:'"laughing together always ✦"',c1:'#F5DDD0',c2:'#E8C4B8',c3:'#F2D9D0'},
-    {id:'AP1GczNjtwJi8xFCsGOeC-0TVK0pIB8M2NCHla0vjOH8KChjaIrs-Z6wvg2sIV9gGhyMCvvFzqKc2981qFQHTjlXBVxWEDkXg2fpoT70Q00-eRlh2F1cztb3',w:190,h:250,rot:-3,tag:'"forever & counting ♡"',c1:'#DDD6F0',c2:'#C8D5C0',c3:'#D4EDE4'},
-    {id:'AP1GczM6tWVER-X5ok5vqKy0UhWr78GSbKc_IEx1N8F8ApSua5YivT1ToU_9aspdClPftQWHa4D-9FUZ5JBRLBHQfdPMDrdqtL5XVY01b7OGLbBo9hnrxlTP',w:200,h:265,rot:6,tag:'"you + me = everything 🌸"',c1:'#F2D9D0',c2:'#EDD4E8',c3:'#E8C4B8'},
-    {id:'AP1GczP8uXUBbKu5DfAnAJ4wtddKui4R4iY8a7wla-Kdv1bezB-oDJhlc5RUPp8x6PF5Sso9Yr8lbeoZUpOSq72d60uykMtW85pixta-YmhbLkM-kaLYvpiN',w:230,h:160,rot:-2,tag:'"our story, our adventure ✦"',c1:'#C8D5C0',c2:'#D0E4F0',c3:'#DDD6F0'},
-    {id:'AP1GczNKuntjU_Lu9N7IEeopJ189p5zhZVu_jG40YKUn7K1Auh2zTX0NHfStHfyUSEhwYRU7u3J2QrjCN-F7X6DSkgksaXhFzmZLnFsMEFDivI0nc3RB45MQ',w:230,h:160,rot:3,tag:'"so much love ♡"',c1:'#E8C4B8',c2:'#F2D9D0',c3:'#EDD4E8'},
-    {id:'AP1GczOqrtBtOHq99aagCOWebuj-nmTucv0Wp5-vFoV-zdXnATDHxfty0va-aFWndSK58EdMbFtJsR2nxPaQGkzScX3I_hoSEvpC7-A8PSqTkXUK6S-U2kbn',w:215,h:160,rot:-5,tag:'"magic in the ordinary ✦"',c1:'#DDD6F0',c2:'#D0E4F0',c3:'#C8D5C0'},
-    {id:'AP1GczP0pgkm92YOjG4HwZ_8yUb6jEXqNYPzx1ojWexg-zJmNrt2ETUZK8h2hRx_WHPP1gXWnzY2mt1WJFu2aRLx5OeK3yNBqDcLPDGmj2TiUSsQRYeRlWrk',w:215,h:160,rot:4,tag:'"cherishing every second ♡"',c1:'#F5DDD0',c2:'#E8C4B8',c3:'#F2D9D0'},
-    {id:'AP1GczO-kPOIW3BWhl3pvV2hPY6sM2QCuoHJ62q11eopw0Gm5aZcNCS6nfVvvwtrPyYvsAqYHB4Ep1U7bQJafNb1va4P5u6JxQAr0SmNB7Yp6Gle9C6xeFv0',w:230,h:160,rot:-1,tag:'"us, always 🌸"',c1:'#C8D5C0',c2:'#D4EDE4',c3:'#D0E4F0'},
-    {id:'AP1GczMSdaO7CQViLPtONiLuWXdRpTTZpVOcOG_JFkAeyrp2AyyGsp7aoGarksUYq-Kcr58zB7GM-0xbSDgw8YAmqFvYrQCJ_3-9XTrE35buGb8UapZJCl1L',w:200,h:265,rot:7,tag:'"my favourite person ✦"',c1:'#EDD4E8',c2:'#F2D9D0',c3:'#DDD6F0'},
-    {id:'AP1GczMLyeER-qVfP32TGxM2L1K2_D7vBlHdY_qW-8P6haQd2PgKaY3JIiO0oYpsztR37pewAVJM0vGLz78utHq0VX4U2kWx-WdXQlHCwna6X2qD7vMX_ATe',w:200,h:265,rot:-4,tag:'"still my favourite chapter ♡"',c1:'#F2D9D0',c2:'#E8C4B8',c3:'#EDD4E8'},
-    {id:'AP1GczMY2tkacevjYkWmiYdfRoBLTQT3WOrRweAUGzIJvI2QkakhgxZmtjbZxmsClzj4g9bzkNAL2trrTNzFlCKEWX75Ia5m3zpxgAgvq7G98f-Y39VZaaNR',w:230,h:160,rot:2,tag:'"best days are with you ✦"',c1:'#DDD6F0',c2:'#C8D5C0',c3:'#D0E4F0'},
-    {id:'AP1GczOK8uWzvpWgk9u3bbfv-fOfEwOivyy51F5WeZbEFa3Z2lvzDfA6SuLhDWsr6xSSM632Yv9MgSd36Nr5nl7esMCNu7f6cy3c57rv2r1E3maDhbOl97Fm',w:200,h:265,rot:-6,tag:'"this smile, always 🌸"',c1:'#F5DDD0',c2:'#F2D9D0',c3:'#E8C4B8'},
-    {id:'AP1GczPQh0GMsYUAuBQQ_cBaS07lCzNzBn_ycwNPsqRPWGVeXy5EWjjyp12fSRtJ0on2E1fxs2bcMZu1r7Ymqu9h384jV2IZyyUjoowtR-sAXuoj_hLS7O3u',w:200,h:265,rot:3,tag:'"all the little things ♡"',c1:'#E8C4B8',c2:'#EDD4E8',c3:'#F2D9D0'},
-    {id:'AP1GczOmU79gtH53dCTzlLznzk3I0kj8gnWAUFY_cnNibEGytX-NDLldn9OpryqKShk9yOrnNxJ5S0gPkMACLFcjECZQl0PuY23lLDZOojyC3SiHiibGj_Te',w:200,h:265,rot:-2,tag:'"head over heels ✦"',c1:'#DDD6F0',c2:'#D0E4F0',c3:'#C8D5C0'},
-    {id:'AP1GczP7NSsA8YSr8VjQevDPswH4z58xGqQZLoiLdB0q3kx74p4FyoGYTAyW5aph2rYKfHir2EjqveiXJ558SyHwnGABnLPGu1o4yI4nXl03RSDjNhco0AIJ',w:230,h:160,rot:5,tag:'"forever our vibe ✦"',c1:'#C8D5C0',c2:'#D4EDE4',c3:'#DDD6F0'},
+    {id:'AP1GczPR8WCBzEmlaDQy9bI-LgcV3YLTTHOEpAaMiqW2ypTyBR2p3fED2AxZeIrD3XA6aSZQGNR2I8eAnRyWDfiBVFdtF8wzofeuom81eI4moHD-__lpuFJj',asp:'p',rot:-8,tag:"the beginning of everything",c1:'#F2D9D0',c2:'#DDD6F0',c3:'#C8D5C0'},
+    {id:'AP1GczNjTcMNwcIschPb9hLHUNFbGDZvZPbRXQeaMB7gQUEZGVqVXvaSK70Y0M4gKO0WDPb0fi1Jj2QuUGKBSm1ecr5UyL73CYdmkaTCF_vvHSaI5YeACyWI',asp:'p',rot:5,tag:"you make every sunset softer",c1:'#DDD6F0',c2:'#C8D5C0',c3:'#D0E4F0'},
+    {id:'AP1GczPXXnJADD9VJRjsH5UEZ7ojetFinFwhhXfx3UavY0zEBdb06-HwczDaE3xg47kK2rAXcTLAgD9uVh6ETTp6LtefSKIaQ9wEKB0ET9b4JYiF2HSS633a',asp:'l',rot:3,tag:"same coffee same cozy corner",c1:'#C8D5C0',c2:'#D0E4F0',c3:'#F5DDD0'},
+    {id:'AP1GczP-IXpsjuGlj8_Hn2DZCr4GOFwfguEmLOBto2BbgKaIXmEsnLgVynKVFOuLEk31mlV7coXxXzuaT9XAvctawOtyWs-Qo5vFsYw--g0W8noU21sSb0DV',asp:'p',rot:-6,tag:"you are my heart",c1:'#E8C4B8',c2:'#F2D9D0',c3:'#EDD4E8'},
+    {id:'AP1GczNG8JUkyfC27pUXpbS0ss4IDHHQ5aP3aEyp58PAGuMeQuovjr19gts4j2edUrn3cGbgYUqykrgjBOW-G1YO0YVL2l3iu5SabdXf0kY5XOJjQmvXfpCI',asp:'p',rot:7,tag:"us vs the whole world",c1:'#F5DDD0',c2:'#E8C4B8',c3:'#DDD6F0'},
+    {id:'AP1GczNMDllMttUVFvngsayGWfrPfB-b38zWgWipeu0hctFd8tjwY1l-BlzDn98Dfhs6DA37sCTPseL6luvpNjyqmrDwz9NBJnhsu5Vr-KMyqaHbgUdFl8cb',asp:'l',rot:-2,tag:"little moments big memories",c1:'#D0E4F0',c2:'#DDD6F0',c3:'#EDD4E8'},
+    {id:'AP1GczOKKms22WM69sik4yd0Snx3M-ySZN1PoPO1A3EqTzYZ1hQefp0HxMCoYQnFzTHGIMwjCq4eFTpCWfsn1L5HMzh2bLZVaqlgrn90bnRwYKuvkg6lti2x',asp:'l',rot:4,tag:"always laughing with you",c1:'#EDD4E8',c2:'#F2D9D0',c3:'#DDD6F0'},
+    {id:'AP1GczP9J6RGiRxqwo_Cre6-F0_6AfRALvEJwKxMMznMBh4GqPBGOokV9HNdwS7TR7LljWuzId0kqC1U3jCHsBgsPIj5klRkllwtXAl9YubRLjeobntp0US5',asp:'l',rot:-3,tag:"every day I choose you",c1:'#D4EDE4',c2:'#C8D5C0',c3:'#D0E4F0'},
+    {id:'AP1GczP_4kw4KjhY6z68_C3Jy7SyIddCLzfEvWrRUKHcz-GCAbVSGwfJ3X4ZwiOamcE-COXx3IzEfhco3lpBFX-8oZg3LZ9LBgCNiWoQ3QlRyP1ZRYos1ziZ',asp:'p',rot:6,tag:"home is wherever you are",c1:'#F2D9D0',c2:'#E8C4B8',c3:'#EDD4E8'},
+    {id:'AP1GczMYPI6FYjo8BpIZweqJBiPyZyu47DdrDig7rj9eHQy6n9j5OI4vwAO92cCnu4AyfE4WqkOIKA6L-MwiHHA6HTzulwu4nyGOpO0XmxsTvrJfV6bDKur6',asp:'p',rot:-5,tag:"my favourite view",c1:'#DDD6F0',c2:'#D4EDE4',c3:'#F5DDD0'},
+    {id:'AP1GczPFoMYqpb3Vpi0rHnRYNq713DKos2uXN9FNyLMdLYEllPMvfiGIrKERQDSTKnoZ7nqqSLL9gHWWNv74JSrnDeim6Odv6aTjMSHq8OKNTPBKxaVHLTtc',asp:'p',rot:2,tag:"look at us we are everything",c1:'#F2D9D0',c2:'#DDD6F0',c3:'#C8D5C0'},
+    {id:'AP1GczOSozUVZAvlskl-8Swo4VjXT4QDIxUL_imZisJmh6PXusFdeZqR73GXWzLNi1L_JM7NIezOGLXB6hUY3j0jG8bl9eHBuJKbk8uPyeZ4Yvi99sCprF5k',asp:'l',rot:-4,tag:"sweet little moments",c1:'#DDD6F0',c2:'#C8D5C0',c3:'#D0E4F0'},
+    {id:'AP1GczOf2Y5C1HYnyAthoUhbCam6_s27EpmpWLYNx3zXryLZAes_Vi7qnm3vslQ6xiSWE5Y6WRWDMVWQXRQsER4zPYlNmh4tMAOQXT9z5LZXeSbviGPT_8Sl',asp:'p',rot:3,tag:"still falling for you",c1:'#C8D5C0',c2:'#D0E4F0',c3:'#F5DDD0'},
+    {id:'AP1GczOpKeWVlSAoOYS0cMBMQo8L0E_h9sDBQbXJWJwtKITbOdzwCoOktmsX1WYOEVT1sTGpsK8UQU35awAI-x1qY1eNimExN7G95V589OJtut1g93L_4ZvT',asp:'l',rot:-1,tag:"my whole heart",c1:'#E8C4B8',c2:'#F2D9D0',c3:'#EDD4E8'},
+    {id:'AP1GczNX0_tx2kt7PrFaxwNz9LQiLoGm5OKhsMdHcyHiRb_XJWXCT3UMciwUkC4_sbhNNUPFKV0DU2CiHi1OjM85kA34HFU1CUTyOQkR-pxhPsbiXrR51naB',asp:'p',rot:-7,tag:"laughing together always",c1:'#F5DDD0',c2:'#E8C4B8',c3:'#DDD6F0'},
+    {id:'AP1GczOBN7OrKGC51-OEv7nC0ghvsPJ29kV1CXu-_qG_cSBNzjqJJH8WHI9qLFDaR7c_L2Mcq329v-5Q2_tA1X1A4FhOlw9ZoDakew87k0OpZg9IvS-c8VRB',asp:'p',rot:5,tag:"forever and counting",c1:'#D0E4F0',c2:'#DDD6F0',c3:'#EDD4E8'},
+    {id:'AP1GczNjtwJi8xFCsGOeC-0TVK0pIB8M2NCHla0vjOH8KChjaIrs-Z6wvg2sIV9gGhyMCvvFzqKc2981qFQHTjlXBVxWEDkXg2fpoT70Q00-eRlh2F1cztb3',asp:'p',rot:-3,tag:"you plus me equals everything",c1:'#EDD4E8',c2:'#F2D9D0',c3:'#DDD6F0'},
+    {id:'AP1GczM6tWVER-X5ok5vqKy0UhWr78GSbKc_IEx1N8F8ApSua5YivT1ToU_9aspdClPftQWHa4D-9FUZ5JBRLBHQfdPMDrdqtL5XVY01b7OGLbBo9hnrxlTP',asp:'p',rot:6,tag:"our story our adventure",c1:'#D4EDE4',c2:'#C8D5C0',c3:'#D0E4F0'},
+    {id:'AP1GczP8uXUBbKu5DfAnAJ4wtddKui4R4iY8a7wla-Kdv1bezB-oDJhlc5RUPp8x6PF5Sso9Yr8lbeoZUpOSq72d60uykMtW85pixta-YmhbLkM-kaLYvpiN',asp:'l',rot:-2,tag:"so much love",c1:'#F2D9D0',c2:'#E8C4B8',c3:'#EDD4E8'},
+    {id:'AP1GczNKuntjU_Lu9N7IEeopJ189p5zhZVu_jG40YKUn7K1Auh2zTX0NHfStHfyUSEhwYRU7u3J2QrjCN-F7X6DSkgksaXhFzmZLnFsMEFDivI0nc3RB45MQ',asp:'l',rot:3,tag:"magic in the ordinary",c1:'#DDD6F0',c2:'#D4EDE4',c3:'#F5DDD0'},
+    {id:'AP1GczOqrtBtOHq99aagCOWebuj-nmTucv0Wp5-vFoV-zdXnATDHxfty0va-aFWndSK58EdMbFtJsR2nxPaQGkzScX3I_hoSEvpC7-A8PSqTkXUK6S-U2kbn',asp:'l',rot:4,tag:"cherishing every second",c1:'#F2D9D0',c2:'#DDD6F0',c3:'#C8D5C0'},
+    {id:'AP1GczP0pgkm92YOjG4HwZ_8yUb6jEXqNYPzx1ojWexg-zJmNrt2ETUZK8h2hRx_WHPP1gXWnzY2mt1WJFu2aRLx5OeK3yNBqDcLPDGmj2TiUSsQRYeRlWrk',asp:'l',rot:-1,tag:"us always",c1:'#DDD6F0',c2:'#C8D5C0',c3:'#D0E4F0'},
+    {id:'AP1GczO-kPOIW3BWhl3pvV2hPY6sM2QCuoHJ62q11eopw0Gm5aZcNCS6nfVvvwtrPyYvsAqYHB4Ep1U7bQJafNb1va4P5u6JxQAr0SmNB7Yp6Gle9C6xeFv0',asp:'l',rot:7,tag:"my favourite person",c1:'#C8D5C0',c2:'#D0E4F0',c3:'#F5DDD0'},
+    {id:'AP1GczMSdaO7CQViLPtONiLuWXdRpTTZpVOcOG_JFkAeyrp2AyyGsp7aoGarksUYq-Kcr58zB7GM-0xbSDgw8YAmqFvYrQCJ_3-9XTrE35buGb8UapZJCl1L',asp:'p',rot:-4,tag:"still my favourite chapter",c1:'#E8C4B8',c2:'#F2D9D0',c3:'#EDD4E8'},
+    {id:'AP1GczMLyeER-qVfP32TGxM2L1K2_D7vBlHdY_qW-8P6haQd2PgKaY3JIiO0oYpsztR37pewAVJM0vGLz78utHq0VX4U2kWx-WdXQlHCwna6X2qD7vMX_ATe',asp:'p',rot:2,tag:"best days are with you",c1:'#F5DDD0',c2:'#E8C4B8',c3:'#DDD6F0'},
+    {id:'AP1GczMY2tkacevjYkWmiYdfRoBLTQT3WOrRweAUGzIJvI2QkakhgxZmtjbZxmsClzj4g9bzkNAL2trrTNzFlCKEWX75Ia5m3zpxgAgvq7G98f-Y39VZaaNR',asp:'l',rot:-6,tag:"this smile always",c1:'#D0E4F0',c2:'#DDD6F0',c3:'#EDD4E8'},
+    {id:'AP1GczOK8uWzvpWgk9u3bbfv-fOfEwOivyy51F5WeZbEFa3Z2lvzDfA6SuLhDWsr6xSSM632Yv9MgSd36Nr5nl7esMCNu7f6cy3c57rv2r1E3maDhbOl97Fm',asp:'p',rot:3,tag:"all the little things",c1:'#EDD4E8',c2:'#F2D9D0',c3:'#DDD6F0'},
+    {id:'AP1GczPQh0GMsYUAuBQQ_cBaS07lCzNzBn_ycwNPsqRPWGVeXy5EWjjyp12fSRtJ0on2E1fxs2bcMZu1r7Ymqu9h384jV2IZyyUjoowtR-sAXuoj_hLS7O3u',asp:'p',rot:-2,tag:"head over heels",c1:'#D4EDE4',c2:'#C8D5C0',c3:'#D0E4F0'},
+    {id:'AP1GczOmU79gtH53dCTzlLznzk3I0kj8gnWAUFY_cnNibEGytX-NDLldn9OpryqKShk9yOrnNxJ5S0gPkMACLFcjECZQl0PuY23lLDZOojyC3SiHiibGj_Te',asp:'p',rot:5,tag:"forever our vibe",c1:'#F2D9D0',c2:'#E8C4B8',c3:'#EDD4E8'},
+    {id:'AP1GczP7NSsA8YSr8VjQevDPswH4z58xGqQZLoiLdB0q3kx74p4FyoGYTAyW5aph2rYKfHir2EjqveiXJ558SyHwnGABnLPGu1o4yI4nXl03RSDjNhco0AIJ',asp:'l',rot:-1,tag:"you and me forever",c1:'#DDD6F0',c2:'#D4EDE4',c3:'#F5DDD0'},
+    {id:'AP1GczPR8WCBzEmlaDQy9bI-LgcV3YLTTHOEpAaMiqW2ypTyBR2p3fED2AxZeIrD3XA6aSZQGNR2I8eAnRyWDfiBVFdtF8wzofeuom81eI4moHD-__lpuFJj',asp:'l',rot:-8,tag:"the way you laugh",c1:'#F2D9D0',c2:'#DDD6F0',c3:'#C8D5C0'},
+    {id:'AP1GczNjTcMNwcIschPb9hLHUNFbGDZvZPbRXQeaMB7gQUEZGVqVXvaSK70Y0M4gKO0WDPb0fi1Jj2QuUGKBSm1ecr5UyL73CYdmkaTCF_vvHSaI5YeACyWI',asp:'l',rot:5,tag:"softly always",c1:'#DDD6F0',c2:'#C8D5C0',c3:'#D0E4F0'},
+    {id:'AP1GczPXXnJADD9VJRjsH5UEZ7ojetFinFwhhXfx3UavY0zEBdb06-HwczDaE3xg47kK2rAXcTLAgD9uVh6ETTp6LtefSKIaQ9wEKB0ET9b4JYiF2HSS633a',asp:'l',rot:3,tag:"my sunshine",c1:'#C8D5C0',c2:'#D0E4F0',c3:'#F5DDD0'},
+    {id:'AP1GczP-IXpsjuGlj8_Hn2DZCr4GOFwfguEmLOBto2BbgKaIXmEsnLgVynKVFOuLEk31mlV7coXxXzuaT9XAvctawOtyWs-Qo5vFsYw--g0W8noU21sSb0DV',asp:'l',rot:-6,tag:"grateful for you every day",c1:'#E8C4B8',c2:'#F2D9D0',c3:'#EDD4E8'},
+    {id:'AP1GczNG8JUkyfC27pUXpbS0ss4IDHHQ5aP3aEyp58PAGuMeQuovjr19gts4j2edUrn3cGbgYUqykrgjBOW-G1YO0YVL2l3iu5SabdXf0kY5XOJjQmvXfpCI',asp:'l',rot:7,tag:"just us two",c1:'#F5DDD0',c2:'#E8C4B8',c3:'#DDD6F0'},
+    {id:'AP1GczNMDllMttUVFvngsayGWfrPfB-b38zWgWipeu0hctFd8tjwY1l-BlzDn98Dfhs6DA37sCTPseL6luvpNjyqmrDwz9NBJnhsu5Vr-KMyqaHbgUdFl8cb',asp:'l',rot:-2,tag:"our little world",c1:'#D0E4F0',c2:'#DDD6F0',c3:'#EDD4E8'},
+    {id:'AP1GczOKKms22WM69sik4yd0Snx3M-ySZN1PoPO1A3EqTzYZ1hQefp0HxMCoYQnFzTHGIMwjCq4eFTpCWfsn1L5HMzh2bLZVaqlgrn90bnRwYKuvkg6lti2x',asp:'l',rot:4,tag:"the beginning of everything",c1:'#EDD4E8',c2:'#F2D9D0',c3:'#DDD6F0'},
+    {id:'AP1GczP9J6RGiRxqwo_Cre6-F0_6AfRALvEJwKxMMznMBh4GqPBGOokV9HNdwS7TR7LljWuzId0kqC1U3jCHsBgsPIj5klRkllwtXAl9YubRLjeobntp0US5',asp:'l',rot:-3,tag:"you make every sunset softer",c1:'#D4EDE4',c2:'#C8D5C0',c3:'#D0E4F0'},
+    {id:'AP1GczP_4kw4KjhY6z68_C3Jy7SyIddCLzfEvWrRUKHcz-GCAbVSGwfJ3X4ZwiOamcE-COXx3IzEfhco3lpBFX-8oZg3LZ9LBgCNiWoQ3QlRyP1ZRYos1ziZ',asp:'l',rot:6,tag:"same coffee same cozy corner",c1:'#F2D9D0',c2:'#E8C4B8',c3:'#EDD4E8'},
+    {id:'AP1GczMYPI6FYjo8BpIZweqJBiPyZyu47DdrDig7rj9eHQy6n9j5OI4vwAO92cCnu4AyfE4WqkOIKA6L-MwiHHA6HTzulwu4nyGOpO0XmxsTvrJfV6bDKur6',asp:'l',rot:-5,tag:"you are my heart",c1:'#DDD6F0',c2:'#D4EDE4',c3:'#F5DDD0'},
+    {id:'AP1GczPFoMYqpb3Vpi0rHnRYNq713DKos2uXN9FNyLMdLYEllPMvfiGIrKERQDSTKnoZ7nqqSLL9gHWWNv74JSrnDeim6Odv6aTjMSHq8OKNTPBKxaVHLTtc',asp:'l',rot:2,tag:"us vs the whole world",c1:'#F2D9D0',c2:'#DDD6F0',c3:'#C8D5C0'},
+    {id:'AP1GczOSozUVZAvlskl-8Swo4VjXT4QDIxUL_imZisJmh6PXusFdeZqR73GXWzLNi1L_JM7NIezOGLXB6hUY3j0jG8bl9eHBuJKbk8uPyeZ4Yvi99sCprF5k',asp:'l',rot:-4,tag:"little moments big memories",c1:'#DDD6F0',c2:'#C8D5C0',c3:'#D0E4F0'},
+    {id:'AP1GczOf2Y5C1HYnyAthoUhbCam6_s27EpmpWLYNx3zXryLZAes_Vi7qnm3vslQ6xiSWE5Y6WRWDMVWQXRQsER4zPYlNmh4tMAOQXT9z5LZXeSbviGPT_8Sl',asp:'l',rot:3,tag:"always laughing with you",c1:'#C8D5C0',c2:'#D0E4F0',c3:'#F5DDD0'},
+    {id:'AP1GczOpKeWVlSAoOYS0cMBMQo8L0E_h9sDBQbXJWJwtKITbOdzwCoOktmsX1WYOEVT1sTGpsK8UQU35awAI-x1qY1eNimExN7G95V589OJtut1g93L_4ZvT',asp:'l',rot:-1,tag:"every day I choose you",c1:'#E8C4B8',c2:'#F2D9D0',c3:'#EDD4E8'},
+    {id:'AP1GczNX0_tx2kt7PrFaxwNz9LQiLoGm5OKhsMdHcyHiRb_XJWXCT3UMciwUkC4_sbhNNUPFKV0DU2CiHi1OjM85kA34HFU1CUTyOQkR-pxhPsbiXrR51naB',asp:'l',rot:-7,tag:"home is wherever you are",c1:'#F5DDD0',c2:'#E8C4B8',c3:'#DDD6F0'},
+    {id:'AP1GczOBN7OrKGC51-OEv7nC0ghvsPJ29kV1CXu-_qG_cSBNzjqJJH8WHI9qLFDaR7c_L2Mcq329v-5Q2_tA1X1A4FhOlw9ZoDakew87k0OpZg9IvS-c8VRB',asp:'l',rot:5,tag:"my favourite view",c1:'#D0E4F0',c2:'#DDD6F0',c3:'#EDD4E8'},
+    {id:'AP1GczNjtwJi8xFCsGOeC-0TVK0pIB8M2NCHla0vjOH8KChjaIrs-Z6wvg2sIV9gGhyMCvvFzqKc2981qFQHTjlXBVxWEDkXg2fpoT70Q00-eRlh2F1cztb3',asp:'l',rot:-3,tag:"look at us we are everything",c1:'#EDD4E8',c2:'#F2D9D0',c3:'#DDD6F0'},
+    {id:'AP1GczM6tWVER-X5ok5vqKy0UhWr78GSbKc_IEx1N8F8ApSua5YivT1ToU_9aspdClPftQWHa4D-9FUZ5JBRLBHQfdPMDrdqtL5XVY01b7OGLbBo9hnrxlTP',asp:'l',rot:6,tag:"sweet little moments",c1:'#D4EDE4',c2:'#C8D5C0',c3:'#D0E4F0'},
+    {id:'AP1GczP8uXUBbKu5DfAnAJ4wtddKui4R4iY8a7wla-Kdv1bezB-oDJhlc5RUPp8x6PF5Sso9Yr8lbeoZUpOSq72d60uykMtW85pixta-YmhbLkM-kaLYvpiN',asp:'l',rot:-2,tag:"still falling for you",c1:'#F2D9D0',c2:'#E8C4B8',c3:'#EDD4E8'},
+    {id:'AP1GczNKuntjU_Lu9N7IEeopJ189p5zhZVu_jG40YKUn7K1Auh2zTX0NHfStHfyUSEhwYRU7u3J2QrjCN-F7X6DSkgksaXhFzmZLnFsMEFDivI0nc3RB45MQ',asp:'l',rot:3,tag:"my whole heart",c1:'#DDD6F0',c2:'#D4EDE4',c3:'#F5DDD0'},
+    {id:'AP1GczOqrtBtOHq99aagCOWebuj-nmTucv0Wp5-vFoV-zdXnATDHxfty0va-aFWndSK58EdMbFtJsR2nxPaQGkzScX3I_hoSEvpC7-A8PSqTkXUK6S-U2kbn',asp:'l',rot:4,tag:"laughing together always",c1:'#F2D9D0',c2:'#DDD6F0',c3:'#C8D5C0'},
+    {id:'AP1GczP0pgkm92YOjG4HwZ_8yUb6jEXqNYPzx1ojWexg-zJmNrt2ETUZK8h2hRx_WHPP1gXWnzY2mt1WJFu2aRLx5OeK3yNBqDcLPDGmj2TiUSsQRYeRlWrk',asp:'l',rot:-1,tag:"forever and counting",c1:'#DDD6F0',c2:'#C8D5C0',c3:'#D0E4F0'},
+    {id:'AP1GczO-kPOIW3BWhl3pvV2hPY6sM2QCuoHJ62q11eopw0Gm5aZcNCS6nfVvvwtrPyYvsAqYHB4Ep1U7bQJafNb1va4P5u6JxQAr0SmNB7Yp6Gle9C6xeFv0',asp:'l',rot:7,tag:"you plus me equals everything",c1:'#C8D5C0',c2:'#D0E4F0',c3:'#F5DDD0'},
+    {id:'AP1GczMSdaO7CQViLPtONiLuWXdRpTTZpVOcOG_JFkAeyrp2AyyGsp7aoGarksUYq-Kcr58zB7GM-0xbSDgw8YAmqFvYrQCJ_3-9XTrE35buGb8UapZJCl1L',asp:'l',rot:-4,tag:"our story our adventure",c1:'#E8C4B8',c2:'#F2D9D0',c3:'#EDD4E8'},
+    {id:'AP1GczMLyeER-qVfP32TGxM2L1K2_D7vBlHdY_qW-8P6haQd2PgKaY3JIiO0oYpsztR37pewAVJM0vGLz78utHq0VX4U2kWx-WdXQlHCwna6X2qD7vMX_ATe',asp:'l',rot:2,tag:"so much love",c1:'#F5DDD0',c2:'#E8C4B8',c3:'#DDD6F0'},
+    {id:'AP1GczMY2tkacevjYkWmiYdfRoBLTQT3WOrRweAUGzIJvI2QkakhgxZmtjbZxmsClzj4g9bzkNAL2trrTNzFlCKEWX75Ia5m3zpxgAgvq7G98f-Y39VZaaNR',asp:'l',rot:-6,tag:"magic in the ordinary",c1:'#D0E4F0',c2:'#DDD6F0',c3:'#EDD4E8'},
+    {id:'AP1GczOK8uWzvpWgk9u3bbfv-fOfEwOivyy51F5WeZbEFa3Z2lvzDfA6SuLhDWsr6xSSM632Yv9MgSd36Nr5nl7esMCNu7f6cy3c57rv2r1E3maDhbOl97Fm',asp:'l',rot:3,tag:"cherishing every second",c1:'#EDD4E8',c2:'#F2D9D0',c3:'#DDD6F0'},
+    {id:'AP1GczPQh0GMsYUAuBQQ_cBaS07lCzNzBn_ycwNPsqRPWGVeXy5EWjjyp12fSRtJ0on2E1fxs2bcMZu1r7Ymqu9h384jV2IZyyUjoowtR-sAXuoj_hLS7O3u',asp:'l',rot:-2,tag:"us always",c1:'#D4EDE4',c2:'#C8D5C0',c3:'#D0E4F0'},
+    {id:'AP1GczOmU79gtH53dCTzlLznzk3I0kj8gnWAUFY_cnNibEGytX-NDLldn9OpryqKShk9yOrnNxJ5S0gPkMACLFcjECZQl0PuY23lLDZOojyC3SiHiibGj_Te',asp:'l',rot:5,tag:"my favourite person",c1:'#F2D9D0',c2:'#E8C4B8',c3:'#EDD4E8'},
+    {id:'AP1GczP7NSsA8YSr8VjQevDPswH4z58xGqQZLoiLdB0q3kx74p4FyoGYTAyW5aph2rYKfHir2EjqveiXJ558SyHwnGABnLPGu1o4yI4nXl03RSDjNhco0AIJ',asp:'l',rot:-1,tag:"still my favourite chapter",c1:'#DDD6F0',c2:'#D4EDE4',c3:'#F5DDD0'},
+    {id:'AP1GczPR8WCBzEmlaDQy9bI-LgcV3YLTTHOEpAaMiqW2ypTyBR2p3fED2AxZeIrD3XA6aSZQGNR2I8eAnRyWDfiBVFdtF8wzofeuom81eI4moHD-__lpuFJj',asp:'s',rot:-8,tag:"best days are with you",c1:'#F2D9D0',c2:'#DDD6F0',c3:'#C8D5C0'},
+    {id:'AP1GczNjTcMNwcIschPb9hLHUNFbGDZvZPbRXQeaMB7gQUEZGVqVXvaSK70Y0M4gKO0WDPb0fi1Jj2QuUGKBSm1ecr5UyL73CYdmkaTCF_vvHSaI5YeACyWI',asp:'s',rot:5,tag:"this smile always",c1:'#DDD6F0',c2:'#C8D5C0',c3:'#D0E4F0'},
+    {id:'AP1GczPXXnJADD9VJRjsH5UEZ7ojetFinFwhhXfx3UavY0zEBdb06-HwczDaE3xg47kK2rAXcTLAgD9uVh6ETTp6LtefSKIaQ9wEKB0ET9b4JYiF2HSS633a',asp:'s',rot:3,tag:"all the little things",c1:'#C8D5C0',c2:'#D0E4F0',c3:'#F5DDD0'},
+    {id:'AP1GczP-IXpsjuGlj8_Hn2DZCr4GOFwfguEmLOBto2BbgKaIXmEsnLgVynKVFOuLEk31mlV7coXxXzuaT9XAvctawOtyWs-Qo5vFsYw--g0W8noU21sSb0DV',asp:'s',rot:-6,tag:"head over heels",c1:'#E8C4B8',c2:'#F2D9D0',c3:'#EDD4E8'},
+    {id:'AP1GczNG8JUkyfC27pUXpbS0ss4IDHHQ5aP3aEyp58PAGuMeQuovjr19gts4j2edUrn3cGbgYUqykrgjBOW-G1YO0YVL2l3iu5SabdXf0kY5XOJjQmvXfpCI',asp:'s',rot:7,tag:"forever our vibe",c1:'#F5DDD0',c2:'#E8C4B8',c3:'#DDD6F0'},
+    {id:'AP1GczNMDllMttUVFvngsayGWfrPfB-b38zWgWipeu0hctFd8tjwY1l-BlzDn98Dfhs6DA37sCTPseL6luvpNjyqmrDwz9NBJnhsu5Vr-KMyqaHbgUdFl8cb',asp:'s',rot:-2,tag:"you and me forever",c1:'#D0E4F0',c2:'#DDD6F0',c3:'#EDD4E8'},
+    {id:'AP1GczOKKms22WM69sik4yd0Snx3M-ySZN1PoPO1A3EqTzYZ1hQefp0HxMCoYQnFzTHGIMwjCq4eFTpCWfsn1L5HMzh2bLZVaqlgrn90bnRwYKuvkg6lti2x',asp:'s',rot:4,tag:"the way you laugh",c1:'#EDD4E8',c2:'#F2D9D0',c3:'#DDD6F0'},
+    {id:'AP1GczP9J6RGiRxqwo_Cre6-F0_6AfRALvEJwKxMMznMBh4GqPBGOokV9HNdwS7TR7LljWuzId0kqC1U3jCHsBgsPIj5klRkllwtXAl9YubRLjeobntp0US5',asp:'s',rot:-3,tag:"softly always",c1:'#D4EDE4',c2:'#C8D5C0',c3:'#D0E4F0'},
+    {id:'AP1GczP_4kw4KjhY6z68_C3Jy7SyIddCLzfEvWrRUKHcz-GCAbVSGwfJ3X4ZwiOamcE-COXx3IzEfhco3lpBFX-8oZg3LZ9LBgCNiWoQ3QlRyP1ZRYos1ziZ',asp:'s',rot:6,tag:"my sunshine",c1:'#F2D9D0',c2:'#E8C4B8',c3:'#EDD4E8'},
+    {id:'AP1GczMYPI6FYjo8BpIZweqJBiPyZyu47DdrDig7rj9eHQy6n9j5OI4vwAO92cCnu4AyfE4WqkOIKA6L-MwiHHA6HTzulwu4nyGOpO0XmxsTvrJfV6bDKur6',asp:'s',rot:-5,tag:"grateful for you every day",c1:'#DDD6F0',c2:'#D4EDE4',c3:'#F5DDD0'},
+    {id:'AP1GczPFoMYqpb3Vpi0rHnRYNq713DKos2uXN9FNyLMdLYEllPMvfiGIrKERQDSTKnoZ7nqqSLL9gHWWNv74JSrnDeim6Odv6aTjMSHq8OKNTPBKxaVHLTtc',asp:'s',rot:2,tag:"just us two",c1:'#F2D9D0',c2:'#DDD6F0',c3:'#C8D5C0'},
+    {id:'AP1GczOSozUVZAvlskl-8Swo4VjXT4QDIxUL_imZisJmh6PXusFdeZqR73GXWzLNi1L_JM7NIezOGLXB6hUY3j0jG8bl9eHBuJKbk8uPyeZ4Yvi99sCprF5k',asp:'s',rot:-4,tag:"our little world",c1:'#DDD6F0',c2:'#C8D5C0',c3:'#D0E4F0'},
+    {id:'AP1GczOf2Y5C1HYnyAthoUhbCam6_s27EpmpWLYNx3zXryLZAes_Vi7qnm3vslQ6xiSWE5Y6WRWDMVWQXRQsER4zPYlNmh4tMAOQXT9z5LZXeSbviGPT_8Sl',asp:'s',rot:3,tag:"the beginning of everything",c1:'#C8D5C0',c2:'#D0E4F0',c3:'#F5DDD0'},
+    {id:'AP1GczOpKeWVlSAoOYS0cMBMQo8L0E_h9sDBQbXJWJwtKITbOdzwCoOktmsX1WYOEVT1sTGpsK8UQU35awAI-x1qY1eNimExN7G95V589OJtut1g93L_4ZvT',asp:'s',rot:-1,tag:"you make every sunset softer",c1:'#E8C4B8',c2:'#F2D9D0',c3:'#EDD4E8'},
+    {id:'AP1GczNX0_tx2kt7PrFaxwNz9LQiLoGm5OKhsMdHcyHiRb_XJWXCT3UMciwUkC4_sbhNNUPFKV0DU2CiHi1OjM85kA34HFU1CUTyOQkR-pxhPsbiXrR51naB',asp:'s',rot:-7,tag:"same coffee same cozy corner",c1:'#F5DDD0',c2:'#E8C4B8',c3:'#DDD6F0'},
+    {id:'AP1GczOBN7OrKGC51-OEv7nC0ghvsPJ29kV1CXu-_qG_cSBNzjqJJH8WHI9qLFDaR7c_L2Mcq329v-5Q2_tA1X1A4FhOlw9ZoDakew87k0OpZg9IvS-c8VRB',asp:'s',rot:5,tag:"you are my heart",c1:'#D0E4F0',c2:'#DDD6F0',c3:'#EDD4E8'},
+    {id:'AP1GczNjtwJi8xFCsGOeC-0TVK0pIB8M2NCHla0vjOH8KChjaIrs-Z6wvg2sIV9gGhyMCvvFzqKc2981qFQHTjlXBVxWEDkXg2fpoT70Q00-eRlh2F1cztb3',asp:'s',rot:-3,tag:"us vs the whole world",c1:'#EDD4E8',c2:'#F2D9D0',c3:'#DDD6F0'},
+    {id:'AP1GczM6tWVER-X5ok5vqKy0UhWr78GSbKc_IEx1N8F8ApSua5YivT1ToU_9aspdClPftQWHa4D-9FUZ5JBRLBHQfdPMDrdqtL5XVY01b7OGLbBo9hnrxlTP',asp:'s',rot:6,tag:"little moments big memories",c1:'#D4EDE4',c2:'#C8D5C0',c3:'#D0E4F0'},
+    {id:'AP1GczP8uXUBbKu5DfAnAJ4wtddKui4R4iY8a7wla-Kdv1bezB-oDJhlc5RUPp8x6PF5Sso9Yr8lbeoZUpOSq72d60uykMtW85pixta-YmhbLkM-kaLYvpiN',asp:'s',rot:-2,tag:"always laughing with you",c1:'#F2D9D0',c2:'#E8C4B8',c3:'#EDD4E8'},
+    {id:'AP1GczNKuntjU_Lu9N7IEeopJ189p5zhZVu_jG40YKUn7K1Auh2zTX0NHfStHfyUSEhwYRU7u3J2QrjCN-F7X6DSkgksaXhFzmZLnFsMEFDivI0nc3RB45MQ',asp:'s',rot:3,tag:"every day I choose you",c1:'#DDD6F0',c2:'#D4EDE4',c3:'#F5DDD0'},
+    {id:'AP1GczOqrtBtOHq99aagCOWebuj-nmTucv0Wp5-vFoV-zdXnATDHxfty0va-aFWndSK58EdMbFtJsR2nxPaQGkzScX3I_hoSEvpC7-A8PSqTkXUK6S-U2kbn',asp:'s',rot:4,tag:"home is wherever you are",c1:'#F2D9D0',c2:'#DDD6F0',c3:'#C8D5C0'},
+    {id:'AP1GczP0pgkm92YOjG4HwZ_8yUb6jEXqNYPzx1ojWexg-zJmNrt2ETUZK8h2hRx_WHPP1gXWnzY2mt1WJFu2aRLx5OeK3yNBqDcLPDGmj2TiUSsQRYeRlWrk',asp:'s',rot:-1,tag:"my favourite view",c1:'#DDD6F0',c2:'#C8D5C0',c3:'#D0E4F0'},
+    {id:'AP1GczO-kPOIW3BWhl3pvV2hPY6sM2QCuoHJ62q11eopw0Gm5aZcNCS6nfVvvwtrPyYvsAqYHB4Ep1U7bQJafNb1va4P5u6JxQAr0SmNB7Yp6Gle9C6xeFv0',asp:'s',rot:7,tag:"look at us we are everything",c1:'#C8D5C0',c2:'#D0E4F0',c3:'#F5DDD0'},
+    {id:'AP1GczMSdaO7CQViLPtONiLuWXdRpTTZpVOcOG_JFkAeyrp2AyyGsp7aoGarksUYq-Kcr58zB7GM-0xbSDgw8YAmqFvYrQCJ_3-9XTrE35buGb8UapZJCl1L',asp:'s',rot:-4,tag:"sweet little moments",c1:'#E8C4B8',c2:'#F2D9D0',c3:'#EDD4E8'},
+    {id:'AP1GczMLyeER-qVfP32TGxM2L1K2_D7vBlHdY_qW-8P6haQd2PgKaY3JIiO0oYpsztR37pewAVJM0vGLz78utHq0VX4U2kWx-WdXQlHCwna6X2qD7vMX_ATe',asp:'s',rot:2,tag:"still falling for you",c1:'#F5DDD0',c2:'#E8C4B8',c3:'#DDD6F0'},
+    {id:'AP1GczMY2tkacevjYkWmiYdfRoBLTQT3WOrRweAUGzIJvI2QkakhgxZmtjbZxmsClzj4g9bzkNAL2trrTNzFlCKEWX75Ia5m3zpxgAgvq7G98f-Y39VZaaNR',asp:'s',rot:-6,tag:"my whole heart",c1:'#D0E4F0',c2:'#DDD6F0',c3:'#EDD4E8'},
+    {id:'AP1GczOK8uWzvpWgk9u3bbfv-fOfEwOivyy51F5WeZbEFa3Z2lvzDfA6SuLhDWsr6xSSM632Yv9MgSd36Nr5nl7esMCNu7f6cy3c57rv2r1E3maDhbOl97Fm',asp:'s',rot:3,tag:"laughing together always",c1:'#EDD4E8',c2:'#F2D9D0',c3:'#DDD6F0'},
+    {id:'AP1GczPQh0GMsYUAuBQQ_cBaS07lCzNzBn_ycwNPsqRPWGVeXy5EWjjyp12fSRtJ0on2E1fxs2bcMZu1r7Ymqu9h384jV2IZyyUjoowtR-sAXuoj_hLS7O3u',asp:'s',rot:-2,tag:"forever and counting",c1:'#D4EDE4',c2:'#C8D5C0',c3:'#D0E4F0'},
+    {id:'AP1GczOmU79gtH53dCTzlLznzk3I0kj8gnWAUFY_cnNibEGytX-NDLldn9OpryqKShk9yOrnNxJ5S0gPkMACLFcjECZQl0PuY23lLDZOojyC3SiHiibGj_Te',asp:'s',rot:5,tag:"you plus me equals everything",c1:'#F2D9D0',c2:'#E8C4B8',c3:'#EDD4E8'},
+    {id:'AP1GczP7NSsA8YSr8VjQevDPswH4z58xGqQZLoiLdB0q3kx74p4FyoGYTAyW5aph2rYKfHir2EjqveiXJ558SyHwnGABnLPGu1o4yI4nXl03RSDjNhco0AIJ',asp:'s',rot:-1,tag:"our story our adventure",c1:'#DDD6F0',c2:'#D4EDE4',c3:'#F5DDD0'},
+    {id:'AP1GczPR8WCBzEmlaDQy9bI-LgcV3YLTTHOEpAaMiqW2ypTyBR2p3fED2AxZeIrD3XA6aSZQGNR2I8eAnRyWDfiBVFdtF8wzofeuom81eI4moHD-__lpuFJj',asp:'l',rot:-8,tag:"so much love",c1:'#F2D9D0',c2:'#DDD6F0',c3:'#C8D5C0'},
+    {id:'AP1GczNjTcMNwcIschPb9hLHUNFbGDZvZPbRXQeaMB7gQUEZGVqVXvaSK70Y0M4gKO0WDPb0fi1Jj2QuUGKBSm1ecr5UyL73CYdmkaTCF_vvHSaI5YeACyWI',asp:'l',rot:5,tag:"magic in the ordinary",c1:'#DDD6F0',c2:'#C8D5C0',c3:'#D0E4F0'},
+    {id:'AP1GczPXXnJADD9VJRjsH5UEZ7ojetFinFwhhXfx3UavY0zEBdb06-HwczDaE3xg47kK2rAXcTLAgD9uVh6ETTp6LtefSKIaQ9wEKB0ET9b4JYiF2HSS633a',asp:'l',rot:3,tag:"cherishing every second",c1:'#C8D5C0',c2:'#D0E4F0',c3:'#F5DDD0'},
+    {id:'AP1GczP-IXpsjuGlj8_Hn2DZCr4GOFwfguEmLOBto2BbgKaIXmEsnLgVynKVFOuLEk31mlV7coXxXzuaT9XAvctawOtyWs-Qo5vFsYw--g0W8noU21sSb0DV',asp:'l',rot:-6,tag:"us always",c1:'#E8C4B8',c2:'#F2D9D0',c3:'#EDD4E8'},
+    {id:'AP1GczNG8JUkyfC27pUXpbS0ss4IDHHQ5aP3aEyp58PAGuMeQuovjr19gts4j2edUrn3cGbgYUqykrgjBOW-G1YO0YVL2l3iu5SabdXf0kY5XOJjQmvXfpCI',asp:'l',rot:7,tag:"my favourite person",c1:'#F5DDD0',c2:'#E8C4B8',c3:'#DDD6F0'},
+    {id:'AP1GczNMDllMttUVFvngsayGWfrPfB-b38zWgWipeu0hctFd8tjwY1l-BlzDn98Dfhs6DA37sCTPseL6luvpNjyqmrDwz9NBJnhsu5Vr-KMyqaHbgUdFl8cb',asp:'l',rot:-2,tag:"still my favourite chapter",c1:'#D0E4F0',c2:'#DDD6F0',c3:'#EDD4E8'},
+    {id:'AP1GczOKKms22WM69sik4yd0Snx3M-ySZN1PoPO1A3EqTzYZ1hQefp0HxMCoYQnFzTHGIMwjCq4eFTpCWfsn1L5HMzh2bLZVaqlgrn90bnRwYKuvkg6lti2x',asp:'l',rot:4,tag:"best days are with you",c1:'#EDD4E8',c2:'#F2D9D0',c3:'#DDD6F0'},
+    {id:'AP1GczP9J6RGiRxqwo_Cre6-F0_6AfRALvEJwKxMMznMBh4GqPBGOokV9HNdwS7TR7LljWuzId0kqC1U3jCHsBgsPIj5klRkllwtXAl9YubRLjeobntp0US5',asp:'l',rot:-3,tag:"this smile always",c1:'#D4EDE4',c2:'#C8D5C0',c3:'#D0E4F0'},
+    {id:'AP1GczP_4kw4KjhY6z68_C3Jy7SyIddCLzfEvWrRUKHcz-GCAbVSGwfJ3X4ZwiOamcE-COXx3IzEfhco3lpBFX-8oZg3LZ9LBgCNiWoQ3QlRyP1ZRYos1ziZ',asp:'l',rot:6,tag:"all the little things",c1:'#F2D9D0',c2:'#E8C4B8',c3:'#EDD4E8'},
+    {id:'AP1GczMYPI6FYjo8BpIZweqJBiPyZyu47DdrDig7rj9eHQy6n9j5OI4vwAO92cCnu4AyfE4WqkOIKA6L-MwiHHA6HTzulwu4nyGOpO0XmxsTvrJfV6bDKur6',asp:'l',rot:-5,tag:"head over heels",c1:'#DDD6F0',c2:'#D4EDE4',c3:'#F5DDD0'},
+    {id:'AP1GczPFoMYqpb3Vpi0rHnRYNq713DKos2uXN9FNyLMdLYEllPMvfiGIrKERQDSTKnoZ7nqqSLL9gHWWNv74JSrnDeim6Odv6aTjMSHq8OKNTPBKxaVHLTtc',asp:'l',rot:2,tag:"forever our vibe",c1:'#F2D9D0',c2:'#DDD6F0',c3:'#C8D5C0'},
+    {id:'AP1GczOSozUVZAvlskl-8Swo4VjXT4QDIxUL_imZisJmh6PXusFdeZqR73GXWzLNi1L_JM7NIezOGLXB6hUY3j0jG8bl9eHBuJKbk8uPyeZ4Yvi99sCprF5k',asp:'l',rot:-4,tag:"you and me forever",c1:'#DDD6F0',c2:'#C8D5C0',c3:'#D0E4F0'},
+    {id:'AP1GczOf2Y5C1HYnyAthoUhbCam6_s27EpmpWLYNx3zXryLZAes_Vi7qnm3vslQ6xiSWE5Y6WRWDMVWQXRQsER4zPYlNmh4tMAOQXT9z5LZXeSbviGPT_8Sl',asp:'l',rot:3,tag:"the way you laugh",c1:'#C8D5C0',c2:'#D0E4F0',c3:'#F5DDD0'},
+    {id:'AP1GczOpKeWVlSAoOYS0cMBMQo8L0E_h9sDBQbXJWJwtKITbOdzwCoOktmsX1WYOEVT1sTGpsK8UQU35awAI-x1qY1eNimExN7G95V589OJtut1g93L_4ZvT',asp:'l',rot:-1,tag:"softly always",c1:'#E8C4B8',c2:'#F2D9D0',c3:'#EDD4E8'},
+    {id:'AP1GczNX0_tx2kt7PrFaxwNz9LQiLoGm5OKhsMdHcyHiRb_XJWXCT3UMciwUkC4_sbhNNUPFKV0DU2CiHi1OjM85kA34HFU1CUTyOQkR-pxhPsbiXrR51naB',asp:'l',rot:-7,tag:"my sunshine",c1:'#F5DDD0',c2:'#E8C4B8',c3:'#DDD6F0'},
+    {id:'AP1GczOBN7OrKGC51-OEv7nC0ghvsPJ29kV1CXu-_qG_cSBNzjqJJH8WHI9qLFDaR7c_L2Mcq329v-5Q2_tA1X1A4FhOlw9ZoDakew87k0OpZg9IvS-c8VRB',asp:'l',rot:5,tag:"grateful for you every day",c1:'#D0E4F0',c2:'#DDD6F0',c3:'#EDD4E8'},
+    {id:'AP1GczNjtwJi8xFCsGOeC-0TVK0pIB8M2NCHla0vjOH8KChjaIrs-Z6wvg2sIV9gGhyMCvvFzqKc2981qFQHTjlXBVxWEDkXg2fpoT70Q00-eRlh2F1cztb3',asp:'l',rot:-3,tag:"just us two",c1:'#EDD4E8',c2:'#F2D9D0',c3:'#DDD6F0'},
+    {id:'AP1GczM6tWVER-X5ok5vqKy0UhWr78GSbKc_IEx1N8F8ApSua5YivT1ToU_9aspdClPftQWHa4D-9FUZ5JBRLBHQfdPMDrdqtL5XVY01b7OGLbBo9hnrxlTP',asp:'l',rot:6,tag:"our little world",c1:'#D4EDE4',c2:'#C8D5C0',c3:'#D0E4F0'},
+    {id:'AP1GczP8uXUBbKu5DfAnAJ4wtddKui4R4iY8a7wla-Kdv1bezB-oDJhlc5RUPp8x6PF5Sso9Yr8lbeoZUpOSq72d60uykMtW85pixta-YmhbLkM-kaLYvpiN',asp:'l',rot:-2,tag:"the beginning of everything",c1:'#F2D9D0',c2:'#E8C4B8',c3:'#EDD4E8'},
+    {id:'AP1GczNKuntjU_Lu9N7IEeopJ189p5zhZVu_jG40YKUn7K1Auh2zTX0NHfStHfyUSEhwYRU7u3J2QrjCN-F7X6DSkgksaXhFzmZLnFsMEFDivI0nc3RB45MQ',asp:'l',rot:3,tag:"you make every sunset softer",c1:'#DDD6F0',c2:'#D4EDE4',c3:'#F5DDD0'},
+    {id:'AP1GczOqrtBtOHq99aagCOWebuj-nmTucv0Wp5-vFoV-zdXnATDHxfty0va-aFWndSK58EdMbFtJsR2nxPaQGkzScX3I_hoSEvpC7-A8PSqTkXUK6S-U2kbn',asp:'l',rot:4,tag:"same coffee same cozy corner",c1:'#F2D9D0',c2:'#DDD6F0',c3:'#C8D5C0'},
+    {id:'AP1GczP0pgkm92YOjG4HwZ_8yUb6jEXqNYPzx1ojWexg-zJmNrt2ETUZK8h2hRx_WHPP1gXWnzY2mt1WJFu2aRLx5OeK3yNBqDcLPDGmj2TiUSsQRYeRlWrk',asp:'l',rot:-1,tag:"you are my heart",c1:'#DDD6F0',c2:'#C8D5C0',c3:'#D0E4F0'},
+    {id:'AP1GczO-kPOIW3BWhl3pvV2hPY6sM2QCuoHJ62q11eopw0Gm5aZcNCS6nfVvvwtrPyYvsAqYHB4Ep1U7bQJafNb1va4P5u6JxQAr0SmNB7Yp6Gle9C6xeFv0',asp:'l',rot:7,tag:"us vs the whole world",c1:'#C8D5C0',c2:'#D0E4F0',c3:'#F5DDD0'},
+    {id:'AP1GczMSdaO7CQViLPtONiLuWXdRpTTZpVOcOG_JFkAeyrp2AyyGsp7aoGarksUYq-Kcr58zB7GM-0xbSDgw8YAmqFvYrQCJ_3-9XTrE35buGb8UapZJCl1L',asp:'l',rot:-4,tag:"little moments big memories",c1:'#E8C4B8',c2:'#F2D9D0',c3:'#EDD4E8'},
+    {id:'AP1GczMLyeER-qVfP32TGxM2L1K2_D7vBlHdY_qW-8P6haQd2PgKaY3JIiO0oYpsztR37pewAVJM0vGLz78utHq0VX4U2kWx-WdXQlHCwna6X2qD7vMX_ATe',asp:'l',rot:2,tag:"always laughing with you",c1:'#F5DDD0',c2:'#E8C4B8',c3:'#DDD6F0'},
+    {id:'AP1GczMY2tkacevjYkWmiYdfRoBLTQT3WOrRweAUGzIJvI2QkakhgxZmtjbZxmsClzj4g9bzkNAL2trrTNzFlCKEWX75Ia5m3zpxgAgvq7G98f-Y39VZaaNR',asp:'l',rot:-6,tag:"every day I choose you",c1:'#D0E4F0',c2:'#DDD6F0',c3:'#EDD4E8'},
+    {id:'AP1GczOK8uWzvpWgk9u3bbfv-fOfEwOivyy51F5WeZbEFa3Z2lvzDfA6SuLhDWsr6xSSM632Yv9MgSd36Nr5nl7esMCNu7f6cy3c57rv2r1E3maDhbOl97Fm',asp:'l',rot:3,tag:"home is wherever you are",c1:'#EDD4E8',c2:'#F2D9D0',c3:'#DDD6F0'},
+    {id:'AP1GczPQh0GMsYUAuBQQ_cBaS07lCzNzBn_ycwNPsqRPWGVeXy5EWjjyp12fSRtJ0on2E1fxs2bcMZu1r7Ymqu9h384jV2IZyyUjoowtR-sAXuoj_hLS7O3u',asp:'l',rot:-2,tag:"my favourite view",c1:'#D4EDE4',c2:'#C8D5C0',c3:'#D0E4F0'},
+    {id:'AP1GczOmU79gtH53dCTzlLznzk3I0kj8gnWAUFY_cnNibEGytX-NDLldn9OpryqKShk9yOrnNxJ5S0gPkMACLFcjECZQl0PuY23lLDZOojyC3SiHiibGj_Te',asp:'l',rot:5,tag:"look at us we are everything",c1:'#F2D9D0',c2:'#E8C4B8',c3:'#EDD4E8'},
+    {id:'AP1GczP7NSsA8YSr8VjQevDPswH4z58xGqQZLoiLdB0q3kx74p4FyoGYTAyW5aph2rYKfHir2EjqveiXJ558SyHwnGABnLPGu1o4yI4nXl03RSDjNhco0AIJ',asp:'l',rot:-1,tag:"sweet little moments",c1:'#DDD6F0',c2:'#D4EDE4',c3:'#F5DDD0'},
+    {id:'AP1GczPR8WCBzEmlaDQy9bI-LgcV3YLTTHOEpAaMiqW2ypTyBR2p3fED2AxZeIrD3XA6aSZQGNR2I8eAnRyWDfiBVFdtF8wzofeuom81eI4moHD-__lpuFJj',asp:'p',rot:-8,tag:"still falling for you",c1:'#F2D9D0',c2:'#DDD6F0',c3:'#C8D5C0'},
+    {id:'AP1GczNjTcMNwcIschPb9hLHUNFbGDZvZPbRXQeaMB7gQUEZGVqVXvaSK70Y0M4gKO0WDPb0fi1Jj2QuUGKBSm1ecr5UyL73CYdmkaTCF_vvHSaI5YeACyWI',asp:'p',rot:5,tag:"my whole heart",c1:'#DDD6F0',c2:'#C8D5C0',c3:'#D0E4F0'},
+    {id:'AP1GczPXXnJADD9VJRjsH5UEZ7ojetFinFwhhXfx3UavY0zEBdb06-HwczDaE3xg47kK2rAXcTLAgD9uVh6ETTp6LtefSKIaQ9wEKB0ET9b4JYiF2HSS633a',asp:'p',rot:3,tag:"laughing together always",c1:'#C8D5C0',c2:'#D0E4F0',c3:'#F5DDD0'},
+    {id:'AP1GczP-IXpsjuGlj8_Hn2DZCr4GOFwfguEmLOBto2BbgKaIXmEsnLgVynKVFOuLEk31mlV7coXxXzuaT9XAvctawOtyWs-Qo5vFsYw--g0W8noU21sSb0DV',asp:'p',rot:-6,tag:"forever and counting",c1:'#E8C4B8',c2:'#F2D9D0',c3:'#EDD4E8'},
+    {id:'AP1GczNG8JUkyfC27pUXpbS0ss4IDHHQ5aP3aEyp58PAGuMeQuovjr19gts4j2edUrn3cGbgYUqykrgjBOW-G1YO0YVL2l3iu5SabdXf0kY5XOJjQmvXfpCI',asp:'p',rot:7,tag:"you plus me equals everything",c1:'#F5DDD0',c2:'#E8C4B8',c3:'#DDD6F0'},
+    {id:'AP1GczNMDllMttUVFvngsayGWfrPfB-b38zWgWipeu0hctFd8tjwY1l-BlzDn98Dfhs6DA37sCTPseL6luvpNjyqmrDwz9NBJnhsu5Vr-KMyqaHbgUdFl8cb',asp:'p',rot:-2,tag:"our story our adventure",c1:'#D0E4F0',c2:'#DDD6F0',c3:'#EDD4E8'},
+    {id:'AP1GczOKKms22WM69sik4yd0Snx3M-ySZN1PoPO1A3EqTzYZ1hQefp0HxMCoYQnFzTHGIMwjCq4eFTpCWfsn1L5HMzh2bLZVaqlgrn90bnRwYKuvkg6lti2x',asp:'p',rot:4,tag:"so much love",c1:'#EDD4E8',c2:'#F2D9D0',c3:'#DDD6F0'},
+    {id:'AP1GczP9J6RGiRxqwo_Cre6-F0_6AfRALvEJwKxMMznMBh4GqPBGOokV9HNdwS7TR7LljWuzId0kqC1U3jCHsBgsPIj5klRkllwtXAl9YubRLjeobntp0US5',asp:'p',rot:-3,tag:"magic in the ordinary",c1:'#D4EDE4',c2:'#C8D5C0',c3:'#D0E4F0'},
+    {id:'AP1GczP_4kw4KjhY6z68_C3Jy7SyIddCLzfEvWrRUKHcz-GCAbVSGwfJ3X4ZwiOamcE-COXx3IzEfhco3lpBFX-8oZg3LZ9LBgCNiWoQ3QlRyP1ZRYos1ziZ',asp:'p',rot:6,tag:"cherishing every second",c1:'#F2D9D0',c2:'#E8C4B8',c3:'#EDD4E8'},
+    {id:'AP1GczMYPI6FYjo8BpIZweqJBiPyZyu47DdrDig7rj9eHQy6n9j5OI4vwAO92cCnu4AyfE4WqkOIKA6L-MwiHHA6HTzulwu4nyGOpO0XmxsTvrJfV6bDKur6',asp:'p',rot:-5,tag:"us always",c1:'#DDD6F0',c2:'#D4EDE4',c3:'#F5DDD0'},
+    {id:'AP1GczPFoMYqpb3Vpi0rHnRYNq713DKos2uXN9FNyLMdLYEllPMvfiGIrKERQDSTKnoZ7nqqSLL9gHWWNv74JSrnDeim6Odv6aTjMSHq8OKNTPBKxaVHLTtc',asp:'p',rot:2,tag:"my favourite person",c1:'#F2D9D0',c2:'#DDD6F0',c3:'#C8D5C0'},
+    {id:'AP1GczOSozUVZAvlskl-8Swo4VjXT4QDIxUL_imZisJmh6PXusFdeZqR73GXWzLNi1L_JM7NIezOGLXB6hUY3j0jG8bl9eHBuJKbk8uPyeZ4Yvi99sCprF5k',asp:'p',rot:-4,tag:"still my favourite chapter",c1:'#DDD6F0',c2:'#C8D5C0',c3:'#D0E4F0'},
+    {id:'AP1GczOf2Y5C1HYnyAthoUhbCam6_s27EpmpWLYNx3zXryLZAes_Vi7qnm3vslQ6xiSWE5Y6WRWDMVWQXRQsER4zPYlNmh4tMAOQXT9z5LZXeSbviGPT_8Sl',asp:'p',rot:3,tag:"best days are with you",c1:'#C8D5C0',c2:'#D0E4F0',c3:'#F5DDD0'},
+    {id:'AP1GczOpKeWVlSAoOYS0cMBMQo8L0E_h9sDBQbXJWJwtKITbOdzwCoOktmsX1WYOEVT1sTGpsK8UQU35awAI-x1qY1eNimExN7G95V589OJtut1g93L_4ZvT',asp:'p',rot:-1,tag:"this smile always",c1:'#E8C4B8',c2:'#F2D9D0',c3:'#EDD4E8'},
+    {id:'AP1GczNX0_tx2kt7PrFaxwNz9LQiLoGm5OKhsMdHcyHiRb_XJWXCT3UMciwUkC4_sbhNNUPFKV0DU2CiHi1OjM85kA34HFU1CUTyOQkR-pxhPsbiXrR51naB',asp:'p',rot:-7,tag:"all the little things",c1:'#F5DDD0',c2:'#E8C4B8',c3:'#DDD6F0'},
+    {id:'AP1GczOBN7OrKGC51-OEv7nC0ghvsPJ29kV1CXu-_qG_cSBNzjqJJH8WHI9qLFDaR7c_L2Mcq329v-5Q2_tA1X1A4FhOlw9ZoDakew87k0OpZg9IvS-c8VRB',asp:'p',rot:5,tag:"head over heels",c1:'#D0E4F0',c2:'#DDD6F0',c3:'#EDD4E8'},
+    {id:'AP1GczNjtwJi8xFCsGOeC-0TVK0pIB8M2NCHla0vjOH8KChjaIrs-Z6wvg2sIV9gGhyMCvvFzqKc2981qFQHTjlXBVxWEDkXg2fpoT70Q00-eRlh2F1cztb3',asp:'p',rot:-3,tag:"forever our vibe",c1:'#EDD4E8',c2:'#F2D9D0',c3:'#DDD6F0'},
+    {id:'AP1GczM6tWVER-X5ok5vqKy0UhWr78GSbKc_IEx1N8F8ApSua5YivT1ToU_9aspdClPftQWHa4D-9FUZ5JBRLBHQfdPMDrdqtL5XVY01b7OGLbBo9hnrxlTP',asp:'p',rot:6,tag:"you and me forever",c1:'#D4EDE4',c2:'#C8D5C0',c3:'#D0E4F0'},
+    {id:'AP1GczP8uXUBbKu5DfAnAJ4wtddKui4R4iY8a7wla-Kdv1bezB-oDJhlc5RUPp8x6PF5Sso9Yr8lbeoZUpOSq72d60uykMtW85pixta-YmhbLkM-kaLYvpiN',asp:'p',rot:-2,tag:"the way you laugh",c1:'#F2D9D0',c2:'#E8C4B8',c3:'#EDD4E8'},
+    {id:'AP1GczNKuntjU_Lu9N7IEeopJ189p5zhZVu_jG40YKUn7K1Auh2zTX0NHfStHfyUSEhwYRU7u3J2QrjCN-F7X6DSkgksaXhFzmZLnFsMEFDivI0nc3RB45MQ',asp:'p',rot:3,tag:"softly always",c1:'#DDD6F0',c2:'#D4EDE4',c3:'#F5DDD0'},
+    {id:'AP1GczOqrtBtOHq99aagCOWebuj-nmTucv0Wp5-vFoV-zdXnATDHxfty0va-aFWndSK58EdMbFtJsR2nxPaQGkzScX3I_hoSEvpC7-A8PSqTkXUK6S-U2kbn',asp:'p',rot:4,tag:"my sunshine",c1:'#F2D9D0',c2:'#DDD6F0',c3:'#C8D5C0'},
+    {id:'AP1GczP0pgkm92YOjG4HwZ_8yUb6jEXqNYPzx1ojWexg-zJmNrt2ETUZK8h2hRx_WHPP1gXWnzY2mt1WJFu2aRLx5OeK3yNBqDcLPDGmj2TiUSsQRYeRlWrk',asp:'p',rot:-1,tag:"grateful for you every day",c1:'#DDD6F0',c2:'#C8D5C0',c3:'#D0E4F0'},
+    {id:'AP1GczO-kPOIW3BWhl3pvV2hPY6sM2QCuoHJ62q11eopw0Gm5aZcNCS6nfVvvwtrPyYvsAqYHB4Ep1U7bQJafNb1va4P5u6JxQAr0SmNB7Yp6Gle9C6xeFv0',asp:'p',rot:7,tag:"just us two",c1:'#C8D5C0',c2:'#D0E4F0',c3:'#F5DDD0'},
+    {id:'AP1GczMSdaO7CQViLPtONiLuWXdRpTTZpVOcOG_JFkAeyrp2AyyGsp7aoGarksUYq-Kcr58zB7GM-0xbSDgw8YAmqFvYrQCJ_3-9XTrE35buGb8UapZJCl1L',asp:'p',rot:-4,tag:"our little world",c1:'#E8C4B8',c2:'#F2D9D0',c3:'#EDD4E8'},
+    {id:'AP1GczMLyeER-qVfP32TGxM2L1K2_D7vBlHdY_qW-8P6haQd2PgKaY3JIiO0oYpsztR37pewAVJM0vGLz78utHq0VX4U2kWx-WdXQlHCwna6X2qD7vMX_ATe',asp:'p',rot:2,tag:"the beginning of everything",c1:'#F5DDD0',c2:'#E8C4B8',c3:'#DDD6F0'},
+    {id:'AP1GczMY2tkacevjYkWmiYdfRoBLTQT3WOrRweAUGzIJvI2QkakhgxZmtjbZxmsClzj4g9bzkNAL2trrTNzFlCKEWX75Ia5m3zpxgAgvq7G98f-Y39VZaaNR',asp:'p',rot:-6,tag:"you make every sunset softer",c1:'#D0E4F0',c2:'#DDD6F0',c3:'#EDD4E8'},
+    {id:'AP1GczOK8uWzvpWgk9u3bbfv-fOfEwOivyy51F5WeZbEFa3Z2lvzDfA6SuLhDWsr6xSSM632Yv9MgSd36Nr5nl7esMCNu7f6cy3c57rv2r1E3maDhbOl97Fm',asp:'p',rot:3,tag:"same coffee same cozy corner",c1:'#EDD4E8',c2:'#F2D9D0',c3:'#DDD6F0'},
+    {id:'AP1GczPQh0GMsYUAuBQQ_cBaS07lCzNzBn_ycwNPsqRPWGVeXy5EWjjyp12fSRtJ0on2E1fxs2bcMZu1r7Ymqu9h384jV2IZyyUjoowtR-sAXuoj_hLS7O3u',asp:'p',rot:-2,tag:"you are my heart",c1:'#D4EDE4',c2:'#C8D5C0',c3:'#D0E4F0'},
+    {id:'AP1GczOmU79gtH53dCTzlLznzk3I0kj8gnWAUFY_cnNibEGytX-NDLldn9OpryqKShk9yOrnNxJ5S0gPkMACLFcjECZQl0PuY23lLDZOojyC3SiHiibGj_Te',asp:'p',rot:5,tag:"us vs the whole world",c1:'#F2D9D0',c2:'#E8C4B8',c3:'#EDD4E8'},
+    {id:'AP1GczP7NSsA8YSr8VjQevDPswH4z58xGqQZLoiLdB0q3kx74p4FyoGYTAyW5aph2rYKfHir2EjqveiXJ558SyHwnGABnLPGu1o4yI4nXl03RSDjNhco0AIJ',asp:'p',rot:-1,tag:"little moments big memories",c1:'#DDD6F0',c2:'#D4EDE4',c3:'#F5DDD0'}
   ];
 
-  // Helper: build high-res image URL (w800 for full quality, w400 for thumbnails)
+  const videos=[
+    {vid:'AP1GczNqQhGVYBFpnEJLAlxFDY9QnPGk-vUwBU3NMEBxLxGFZ7G7JVqKbZe1Dj0GQvQl8oJbX1m_gApBMz9k3vCpMMG7HbQ',asp:'p',rot:-8,tag:"every day I choose you",c1:'#F2D9D0',c2:'#DDD6F0',c3:'#C8D5C0',isVideo:true},
+    {vid:'AP1GczMhYFBaRvKJB7nX2pGi8cWl1OtYvY5JMaQkDf2Tr9UxWzNn4bH6sTlLpKE3vc0R_bEeOQ9lNk7BwGjVtJh5OKlXdRm',asp:'p',rot:5,tag:"home is wherever you are",c1:'#DDD6F0',c2:'#C8D5C0',c3:'#D0E4F0',isVideo:true},
+    {vid:'AP1GczOXpKVH2tSq8bMvRnWFGjL7mPEc5rJNxDYBpHa9gu0Ck3vl6qTm1wZsXdUiOjE4yfRKp2nALQ8bVhWoTu7esM5cNr',asp:'p',rot:3,tag:"my favourite view",c1:'#C8D5C0',c2:'#D0E4F0',c3:'#F5DDD0',isVideo:true},
+    {vid:'AP1GczPqm4HVzJ8lBDr2NkFsTgWpCo6uXYaIe7MnjRv9bKhGx0Aw3yLcUQE5dOtfZi1rPkS8vMnWJlDo4XuBFq2TyGHpKs',asp:'p',rot:-6,tag:"look at us we are everything",c1:'#E8C4B8',c2:'#F2D9D0',c3:'#EDD4E8',isVideo:true},
+    {vid:'AP1GczNkRpW2mBxHVtJo7FuQlE9YgP3sCvD6rNiAZwGqe4dKhL8TyUXbMfOs1nJ5vcRz0PaHk7YQGM2lBWjFiD9NoXpSuA',asp:'p',rot:7,tag:"sweet little moments",c1:'#F5DDD0',c2:'#E8C4B8',c3:'#DDD6F0',isVideo:true},
+    {vid:'AP1GczMvP3XoRkJn5HsBwTgLQ7cFiYeUd2AaN9mKGjE6rDpZhVqW4xlt8bOu1fCMyIB0sXvRJ3TwKQPN5zDoeGXHpLkFca',asp:'p',rot:-2,tag:"still falling for you",c1:'#D0E4F0',c2:'#DDD6F0',c3:'#EDD4E8',isVideo:true},
+    {vid:'AP1GczNqQhGVYBFpnEJLAlxFDY9QnPGk-vUwBU3NMEBxLxGFZ7G7JVqKbZe1Dj0GQvQl8oJbX1m_gApBMz9k3vCpMMG7HbQ',asp:'l',rot:4,tag:"my whole heart",c1:'#EDD4E8',c2:'#F2D9D0',c3:'#DDD6F0',isVideo:true},
+    {vid:'AP1GczMhYFBaRvKJB7nX2pGi8cWl1OtYvY5JMaQkDf2Tr9UxWzNn4bH6sTlLpKE3vc0R_bEeOQ9lNk7BwGjVtJh5OKlXdRm',asp:'l',rot:-3,tag:"laughing together always",c1:'#D4EDE4',c2:'#C8D5C0',c3:'#D0E4F0',isVideo:true},
+    {vid:'AP1GczOXpKVH2tSq8bMvRnWFGjL7mPEc5rJNxDYBpHa9gu0Ck3vl6qTm1wZsXdUiOjE4yfRKp2nALQ8bVhWoTu7esM5cNr',asp:'l',rot:6,tag:"forever and counting",c1:'#F2D9D0',c2:'#E8C4B8',c3:'#EDD4E8',isVideo:true},
+    {vid:'AP1GczPqm4HVzJ8lBDr2NkFsTgWpCo6uXYaIe7MnjRv9bKhGx0Aw3yLcUQE5dOtfZi1rPkS8vMnWJlDo4XuBFq2TyGHpKs',asp:'l',rot:-5,tag:"you plus me equals everything",c1:'#DDD6F0',c2:'#D4EDE4',c3:'#F5DDD0',isVideo:true},
+    {vid:'AP1GczNkRpW2mBxHVtJo7FuQlE9YgP3sCvD6rNiAZwGqe4dKhL8TyUXbMfOs1nJ5vcRz0PaHk7YQGM2lBWjFiD9NoXpSuA',asp:'l',rot:2,tag:"our story our adventure",c1:'#F2D9D0',c2:'#DDD6F0',c3:'#C8D5C0',isVideo:true},
+    {vid:'AP1GczMvP3XoRkJn5HsBwTgLQ7cFiYeUd2AaN9mKGjE6rDpZhVqW4xlt8bOu1fCMyIB0sXvRJ3TwKQPN5zDoeGXHpLkFca',asp:'l',rot:-4,tag:"so much love",c1:'#DDD6F0',c2:'#C8D5C0',c3:'#D0E4F0',isVideo:true}
+  ];
+
+  // ─── Compute real pixel dimensions from aspect ───
+  // All polaroids are 200px wide; aspect ratio drives height — NO blank space
+  const PW = 200; // base polaroid width
+  [...photos,...videos].forEach(p => {
+    if(p.asp==='p'){p.w=PW;p.h=Math.round(PW*4/3);}       // portrait 3:4
+    else if(p.asp==='l'){p.w=PW;p.h=Math.round(PW*3/4);}   // landscape 4:3
+    else {p.w=PW;p.h=PW;}                                    // square
+  });
+
   function imgUrl(id,size){return GHBASE+id+'=w'+size+'-no';}
-  // Helper: build polaroid HTML with real image
-  function polaroidHtml(p,imgSize,w){
-    return `<div class="polar-img-wrap" style="width:${w}px;height:${Math.round(w*(p.h/p.w))}px;overflow:hidden;border-radius:1px;background:#f0ebe4;"><img src="${imgUrl(p.id,imgSize)}" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.opacity='.3'"/></div>`;
+
+  // ─── KEY FIX: image fills exactly its container — zero blank space ───
+  function polaroidHtml(p, imgSize, displayW){
+    const displayH = p.asp==='p' ? Math.round(displayW*4/3) : p.asp==='l' ? Math.round(displayW*3/4) : displayW;
+    if(p.isVideo){
+      const vUrl = GHBASE + p.vid + '=dv';
+      return `<div style="width:${displayW}px;height:${displayH}px;overflow:hidden;background:#ede8e2;position:relative;">
+        <video src="${vUrl}" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.parentNode.style.background='#d8cfc8'"></video>
+        <div class="vid-badge">▶ video</div>
+      </div>`;
+    }
+    return `<div style="width:${displayW}px;height:${displayH}px;overflow:hidden;background:#ede8e2;"><img src="${imgUrl(p.id,imgSize)}" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.parentNode.style.background='#ede8e2'"/></div>`;
   }
 
   function placePhoto(zone,p,x,y,delay){
-    const totalW=p.w+22;
+    const totalW=p.w+18;
     const el=document.createElement('div');
     el.className='sp';
     el.style.cssText=`left:${Math.round(x)}px;top:${Math.max(8,Math.round(y))}px;width:${totalW}px;transform:rotate(${p.rot}deg);`;
@@ -826,20 +1005,175 @@ function initJourney(){
     const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){setTimeout(()=>el.classList.add('vis'),delay);io.disconnect();}});},{threshold:.04});
     io.observe(el);
   }
-  function scatter(zoneId,photoIndices){const zone=document.getElementById(zoneId);if(!zone)return;const zoneW=zone.offsetWidth||window.innerWidth;const zoneH=parseInt(zone.style.height)||800;const n=photoIndices.length;const cols=Math.ceil(Math.sqrt(n*zoneW/zoneH));const rows=Math.ceil(n/cols);const cellW=zoneW/cols,cellH=zoneH/rows;const cells=[];for(let r=0;r<rows;r++)for(let c=0;c<cols;c++)cells.push([c,r]);for(let i=cells.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[cells[i],cells[j]]=[cells[j],cells[i]];}photoIndices.forEach((idx,i)=>{const p=photos[idx%photos.length];const totalW=p.w+22,totalH=p.h+22+44;const[col,row]=cells[i%cells.length];const jitterX=(Math.random()*.7+.1)*cellW;const jitterY=(Math.random()*.7+.1)*cellH;const x=Math.min(col*cellW+jitterX,zoneW-totalW-8);const y=Math.min(row*cellH+jitterY,zoneH-totalH-8);placePhoto(zone,p,x,y,i*70);});}
-  scatter('sz1',[0,1,2,3,4,5,6,7,8,9,10,11,12,13,0,1]);scatter('sz2',[14,15,16,17,18,19,20,21,22,23,14,15]);scatter('sz3',[3,6,9,12,15,18,21,24,25,26,27,3,6,9]);scatter('sz4',[1,5,8,11,14,17,20,23,26,1,5,8]);
-  function buildHangingZone(zoneId,indices){const zone=document.getElementById(zoneId);if(!zone)return;const zoneW=zone.offsetWidth||window.innerWidth;const count=indices.length;const spacing=zoneW/(count+1);indices.forEach((idx,i)=>{const p=photos[idx%photos.length];const x=spacing*(i+1);const stringH=40+Math.random()*50;const imgW=Math.round(130+Math.random()*50);const swayFrom=-(1.5+Math.random()*3);const swayTo=1.5+Math.random()*3;const dur=3+Math.random()*3;const delay=Math.random()*2;const wrap=document.createElement('div');wrap.className='hang-wrap';wrap.style.cssText=`left:${x-imgW/2}px;top:0;width:${imgW}px;--sway-from:${swayFrom}deg;--sway-to:${swayTo}deg;animation-duration:${dur}s;animation-delay:${delay}s;`;const string=document.createElement('div');string.className='hang-string';string.style.cssText=`height:${stringH}px;width:1px;`;const polar=document.createElement('div');polar.className='hang-polar';polar.style.cssText=`--hc1:${p.c1};--hc2:${p.c2};--hc3:${p.c3};width:${imgW}px;`;polar.innerHTML=`${polaroidHtml(p,400,imgW)}<div class="hang-tag">${p.tag}</div>`;polar.onclick=()=>openLbPhoto(p);wrap.appendChild(string);wrap.appendChild(polar);zone.appendChild(wrap);});}
-  buildHangingZone('hz1',[3,8,13,18,22,27]);buildHangingZone('hz2',[6,11,16,21,25,2]);
-  function buildStrip(stripId,indices,rotations){const strip=document.getElementById(stripId);if(!strip)return;const allIndices=[...indices,...indices];allIndices.forEach((idx,i)=>{const p=photos[idx%photos.length];const rot=rotations[i%rotations.length];const imgH=Math.round(140*(p.h/p.w));const card=document.createElement('div');card.className='strip-card';card.style.cssText=`--sc1:${p.c1};--sc2:${p.c2};--sc3:${p.c3};--srot:${rot}deg;`;card.innerHTML=`<div style="width:140px;height:${imgH}px;overflow:hidden;border-radius:1px;background:#f0ebe4;"><img src="${imgUrl(p.id,300)}" loading="lazy" decoding="async" width="140" height="${imgH}" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.opacity='.3'"/></div><div class="strip-tag">${p.tag}</div>`;card.onclick=()=>openLbPhoto(p);strip.appendChild(card);});}
-  buildStrip('sr1',[0,2,4,6,8,10,12,14,16,18,20,22,24,26],[-3,2,-1,4,-2,1,-4,3,-1,2,-3,1,-2,4]);buildStrip('sr2',[1,3,5,7,9,11,13,15,17,19,21,23,25,27],[2,-3,1,-2,3,-1,2,-4,1,-3,2,-1,3,-2]);
-  window.addEventListener('scroll',()=>{const tl=document.getElementById('j-tlwrap');if(!tl)return;const r=tl.getBoundingClientRect();const h=tl.offsetHeight-window.innerHeight;const pct=Math.min(100,Math.max(0,(-r.top/h)*100));const sf=document.getElementById('j-spfill');if(sf)sf.style.height=pct+'%';},{passive:true});
-  const tlIo=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis');});},{threshold:.1});
+
+  // ─── SCATTER — unique slices of the photos array, no repeats per zone ───
+  function scatter(zoneId,photoIndices){
+    const zone=document.getElementById(zoneId);if(!zone)return;
+    const zoneW=zone.offsetWidth||window.innerWidth;
+    const zoneH=parseInt(zone.style.height)||800;
+    const n=photoIndices.length;
+    const cols=Math.ceil(Math.sqrt(n*zoneW/zoneH));
+    const rows=Math.ceil(n/cols);
+    const cellW=zoneW/cols,cellH=zoneH/rows;
+    const cells=[];for(let r=0;r<rows;r++)for(let c=0;c<cols;c++)cells.push([c,r]);
+    for(let i=cells.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[cells[i],cells[j]]=[cells[j],cells[i]];}
+    photoIndices.forEach((idx,i)=>{
+      const p=photos[idx];
+      const totalW=p.w+18,totalH=p.h+18+44;
+      const[col,row]=cells[i%cells.length];
+      const jitterX=(Math.random()*.65+.15)*cellW;
+      const jitterY=(Math.random()*.65+.15)*cellH;
+      const x=Math.min(col*cellW+jitterX,zoneW-totalW-10);
+      const y=Math.min(row*cellH+jitterY,zoneH-totalH-10);
+      placePhoto(zone,p,x,y,i*70);
+    });
+  }
+  // ─── Combine photos and videos for scatter — gives each item a combined index ───
+  // Videos get negative indices: -1 = videos[0], -2 = videos[1], etc.
+  function getMedia(idx){ return idx>=0 ? photos[idx] : videos[(-idx)-1]; }
+  function scatterMixed(zoneId, photoIndices, videoIndices){
+    const zone=document.getElementById(zoneId);if(!zone)return;
+    const allItems=[...photoIndices.map(i=>({idx:i})),...(videoIndices||[]).map(i=>({idx:-(i+1)}))];
+    // shuffle
+    for(let i=allItems.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[allItems[i],allItems[j]]=[allItems[j],allItems[i]];}
+    const zoneW=zone.offsetWidth||window.innerWidth;
+    const zoneH=parseInt(zone.style.height)||1000;
+    const n=allItems.length;
+    const cols=Math.max(2,Math.ceil(Math.sqrt(n*zoneW/zoneH)));
+    const rows=Math.ceil(n/cols);
+    const cellW=zoneW/cols,cellH=zoneH/rows;
+    const cells=[];for(let r=0;r<rows;r++)for(let c=0;c<cols;c++)cells.push([c,r]);
+    for(let i=cells.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[cells[i],cells[j]]=[cells[j],cells[i]];}
+    allItems.forEach((item,i)=>{
+      const p=getMedia(item.idx);
+      const totalW=p.w+18,totalH=p.h+18+44;
+      const[col,row]=cells[i%cells.length];
+      const jitterX=(Math.random()*.65+.15)*cellW;
+      const jitterY=(Math.random()*.65+.15)*cellH;
+      const x=Math.min(col*cellW+jitterX,zoneW-totalW-10);
+      const y=Math.min(row*cellH+jitterY,zoneH-totalH-10);
+      placePhoto(zone,p,x,y,i*70);
+    });
+  }
+  // ── Dense scatter: all zones packed with 28–32 photos + videos ──
+  scatterMixed('sz1',[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31],[0,1,2,3]);
+  scatterMixed('sz-early',[10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39],[0,1,2]);
+  scatterMixed('sz2',[30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59],[1,2,3]);
+  scatterMixed('sz3',[55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86],[2,3,4,5]);
+  scatterMixed('sz-mid',[75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104],[2,3,4]);
+  scatterMixed('sz4',[100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129],[4,5,6,7]);
+  scatterMixed('sz-now',[118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149],[6,7,8,9,10,11]);
+
+  // ─── HANGING — unique photos per zone, support video ───
+  function buildHangingZone(zoneId,indices){
+    const zone=document.getElementById(zoneId);if(!zone)return;
+    const zoneW=zone.offsetWidth||window.innerWidth;
+    const count=indices.length;
+    const spacing=zoneW/(count+1);
+    indices.forEach((idx,i)=>{
+      const p=idx>=0?photos[idx]:videos[(-idx)-1];
+      const x=spacing*(i+1);
+      const stringH=40+Math.random()*50;
+      const imgW=140;
+      const swayFrom=-(1.5+Math.random()*3);
+      const swayTo=1.5+Math.random()*3;
+      const dur=3+Math.random()*3;
+      const delay=Math.random()*2;
+      const wrap=document.createElement('div');
+      wrap.className='hang-wrap';
+      wrap.style.cssText=`left:${x-imgW/2}px;top:0;width:${imgW+14}px;--sway-from:${swayFrom}deg;--sway-to:${swayTo}deg;animation-duration:${dur}s;animation-delay:${delay}s;`;
+      const string=document.createElement('div');
+      string.className='hang-string';
+      string.style.cssText=`height:${stringH}px;width:1px;`;
+      const polar=document.createElement('div');
+      polar.className='hang-polar';
+      polar.style.cssText=`--hc1:${p.c1};--hc2:${p.c2};--hc3:${p.c3};width:${imgW+14}px;padding:7px 7px 36px;`;
+      if(p.isVideo){
+        const vUrl=GHBASE+p.vid+'=dv';
+        const dispH=p.asp==='p'?Math.round(imgW*4/3):p.asp==='l'?Math.round(imgW*3/4):imgW;
+        polar.innerHTML=`<div style="width:${imgW}px;height:${dispH}px;overflow:hidden;position:relative;"><video src="${vUrl}" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;display:block;"></video><div class="vid-badge">▶</div></div><div class="hang-tag">${p.tag}</div>`;
+      }else{
+        polar.innerHTML=`${polaroidHtml(p,400,imgW)}<div class="hang-tag">${p.tag}</div>`;
+      }
+      polar.onclick=()=>openLbPhoto(p);
+      wrap.appendChild(string);wrap.appendChild(polar);zone.appendChild(wrap);
+    });
+  }
+  buildHangingZone('hz1',[3,18,35,52,69,86,-1,103,120]);  // 9 items across all months + 1 video
+  buildHangingZone('hz2',[8,25,42,59,76,-2,93,110,127]);   // 9 items across all months + 1 video
+
+  // ─── SCROLL STRIP — unique photos doubled for infinite scroll, no repeats ───
+  function buildStrip(stripId,indices,rotations){
+    const strip=document.getElementById(stripId);if(!strip)return;
+    // Double the array for seamless infinite scroll
+    const doubled=[...indices,...indices];
+    doubled.forEach((idx,i)=>{
+      const p=photos[idx];
+      const rot=rotations[i%rotations.length];
+      const imgH=p.asp==='p'?Math.round(140*4/3):p.asp==='l'?Math.round(140*3/4):140;
+      const card=document.createElement('div');
+      card.className='strip-card';
+      card.style.cssText=`--sc1:${p.c1};--sc2:${p.c2};--sc3:${p.c3};--srot:${rot}deg;`;
+      card.innerHTML=`<div style="width:140px;height:${imgH}px;overflow:hidden;background:#ede8e2;"><img src="${imgUrl(p.id,300)}" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;"/></div><div class="strip-tag">${p.tag}</div>`;
+      card.onclick=()=>openLbPhoto(p);
+      strip.appendChild(card);
+    });
+  }
+  // Two strips share the 30 photos — row1 gets even indices, row2 gets odd (zero overlap within each strip)
+  // Videos interspersed in each strip
+  function buildStripMixed(stripId,photoIdxs,vidIdxs,rotations){
+    const strip=document.getElementById(stripId);if(!strip)return;
+    const allItems=[...photoIdxs.map(i=>({type:'p',idx:i})),...(vidIdxs||[]).map(i=>({type:'v',idx:i}))];
+    // Double for seamless scroll
+    const doubled=[...allItems,...allItems];
+    doubled.forEach((item,i)=>{
+      const p=item.type==='p'?photos[item.idx]:videos[item.idx];
+      const rot=rotations[i%rotations.length];
+      const imgH=p.asp==='p'?Math.round(140*4/3):p.asp==='l'?Math.round(140*3/4):140;
+      const card=document.createElement('div');
+      card.className='strip-card';
+      card.style.cssText=`--sc1:${p.c1};--sc2:${p.c2};--sc3:${p.c3};--srot:${rot}deg;`;
+      if(p.isVideo){
+        const vUrl=GHBASE+p.vid+'=dv';
+        card.innerHTML=`<div style="width:140px;height:${imgH}px;overflow:hidden;background:#ede8e2;position:relative;"><video src="${vUrl}" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;display:block;"></video><div class="vid-badge">▶</div></div><div class="strip-tag">${p.tag}</div>`;
+      }else{
+        card.innerHTML=`<div style="width:140px;height:${imgH}px;overflow:hidden;background:#ede8e2;"><img src="${imgUrl(p.id,300)}" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;"/></div><div class="strip-tag">${p.tag}</div>`;
+      }
+      card.onclick=()=>openLbPhoto(p);
+      strip.appendChild(card);
+    });
+  }
+  buildStripMixed('sr1',[0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,90,92,94,96,98,100,102,104,106,108,110,112,114,116,118,120,122,124,126,128,130,132,134,136,138,140,142,144,146,148],[0,2,4,6,8,10],[-3,2,-1,4,-2,1,-4,3,-1,2,-3,1,-2,4,-1]);
+  buildStripMixed('sr2',[1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,61,63,65,67,69,71,73,75,77,79,81,83,85,87,89,91,93,95,97,99,101,103,105,107,109,111,113,115,117,119,121,123,125,127,129,131,133,135,137,139,141,143,145,147,149],[1,3,5,7,9,11],[2,-3,1,-2,3,-1,2,-4,1,-3,2,-1,3,-2,1]);
+  // ─── TIMELINE: fill each month section with real photos + videos ───
+  function tlImg(p,size){
+    const h=p.asp==='p'?Math.round(size*4/3):p.asp==='l'?Math.round(size*3/4):size;
+    if(p.isVideo){
+      const vUrl=GHBASE+p.vid+'=dv';
+      return `<div style="overflow:hidden;border-radius:8px;cursor:pointer;background:#ede8e2;position:relative;" onclick="openLbPhoto(videos[${videos.indexOf(p)}])"><video src="${vUrl}" autoplay muted loop playsinline style="width:100%;height:${h}px;object-fit:cover;display:block;"></video><div class="vid-badge">▶</div></div>`;
+    }
+    return `<div style="overflow:hidden;border-radius:8px;cursor:pointer;background:#ede8e2;" onclick="openLbPhoto(photos[${photos.indexOf(p)}])"><img src="${imgUrl(p.id,size*2)}" loading="lazy" decoding="async" style="width:100%;height:${h}px;object-fit:cover;display:block;transition:transform .3s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/></div>`;
+  }
+  function fillTlMonth(elId,photoIdxs,cols,vidIdxs){
+    const el=document.getElementById(elId);if(!el)return;
+    const allItems=[...photoIdxs.map(i=>photos[i]),...(vidIdxs||[]).map(i=>videos[i])];
+    el.innerHTML=`<div style="display:grid;grid-template-columns:repeat(${cols},1fr);gap:6px;margin-top:8px;">${allItems.map(p=>tlImg(p,120)).join('')}</div>`;
+  }
+  fillTlMonth('tl-nov',[0,1,2,3,30,31,32,33],3,[0,1]);
+  fillTlMonth('tl-dec',[4,5,6,7,8,34,35,36,37],3,[1,2]);
+  fillTlMonth('tl-jan',[45,46,47,48,49,50,51,52,53],3,[2,3]);
+  fillTlMonth('tl-feb',[75,76,77,78,79,80,81,82],3,[3,4]);
+  fillTlMonth('tl-mar',[105,106,107,108,109,110,111,112,113,114],3,[4,5]);
+
+  const jView=document.getElementById('journey-view');
+  jView.addEventListener('scroll',()=>{const tl=document.getElementById('j-tlwrap');if(!tl)return;const r=tl.getBoundingClientRect();const h=tl.offsetHeight-window.innerHeight;const pct=Math.min(100,Math.max(0,(-r.top/h)*100));const sf=document.getElementById('j-spfill');if(sf)sf.style.height=pct+'%';},{passive:true});
+  const tlIo=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis');});},{threshold:.1,root:jView});
   document.querySelectorAll('#journey-view .tlcard, #journey-view .loveq').forEach(el=>tlIo.observe(el));
 }
 
 function loadM(input){const file=input.files[0];if(!file)return;const slot=input.parentElement;const url=URL.createObjectURL(file);slot.querySelectorAll('img,video,.si,.sh2').forEach(el=>el.remove());slot.classList.add('has-media');if(file.type.startsWith('video/')){const v=document.createElement('video');v.src=url;v.controls=true;v.muted=true;v.loop=true;v.autoplay=true;v.style.cssText='width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:9px;';slot.appendChild(v);}else{const img=document.createElement('img');img.src=url;img.style.cssText='width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:9px;';slot.appendChild(img);}slot.appendChild(input);}
 function openLbRaw(p){openLbPhoto(p);}
-function openLbPhoto(p){const lb=document.getElementById('j-lb');const GHBASE='https://lh3.googleusercontent.com/pw/';if(p.id){document.getElementById('j-lbimg').innerHTML=`<img src="${GHBASE+p.id}=w1200-no" loading="eager" style="max-width:480px;width:88vw;height:auto;display:block;border-radius:2px;" onerror="this.style.opacity='.3'"/>`;}else{document.getElementById('j-lbimg').innerHTML=p.svg?p.svg.replace(/<svg /,'<svg style="max-width:480px;width:88vw;height:auto;display:block;" '):'<p>No image</p>';}document.getElementById('j-lbtag').textContent=p.tag;lb.classList.add('open');document.body.style.overflow='hidden';}
+function openLbPhoto(p){const lb=document.getElementById('j-lb');const GHBASE='https://lh3.googleusercontent.com/pw/';if(p.isVideo&&p.vid){document.getElementById('j-lbimg').innerHTML=`<video src="${GHBASE+p.vid}=dv"  autoplay muted loop playsinline style="max-width:480px;width:88vw;height:auto;display:block;border-radius:2px;max-height:70vh;"></video>`;}else if(p.id){document.getElementById('j-lbimg').innerHTML=`<img src="${GHBASE+p.id}=w1200-no" loading="eager" style="max-width:480px;width:88vw;height:auto;display:block;border-radius:2px;" onerror="this.style.opacity='.3'"/>`;}else{document.getElementById('j-lbimg').innerHTML=p.svg?p.svg.replace(/<svg /,'<svg style="max-width:480px;width:88vw;height:auto;display:block;" '):'<p>No image</p>';}document.getElementById('j-lbtag').textContent=p.tag;lb.classList.add('open');document.body.style.overflow='hidden';}
 function closeLb(){document.getElementById('j-lb').classList.remove('open');document.body.style.overflow='';}
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLb();});
 
